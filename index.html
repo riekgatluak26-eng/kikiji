@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Kikiji National Orphanage Center | A Home for Children in Yei, South Sudan</title>
+    <meta name="description" content="Kikiji National Orphanage Center provides education and emergency protection to neglected children in Yei, South Sudan. Sponsor a child, volunteer, or visit us today." />
+    <meta name="keywords" content="Kikiji, orphanage, South Sudan, Yei, sponsor a child, child protection, education, charity" />
+    <meta name="author" content="Kikiji National Orphanage Center" />
+    <meta property="og:title" content="Kikiji National Orphanage Center | Leave No Child Behind" />
+    <meta property="og:description" content="A home where every child is seen, loved, and given a chance to grow. Based in Yei, South Sudan." />
+    <meta property="og:type" content="website" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        forest: '#2D4739',
+                        pine: '#1E362A',
+                        moss: '#3A5A40',
+                        sage: '#7A8B6F',
+                        fern: '#8FAF8F',
+                        stone: '#CAD2C5',
+                        mist: '#E5EAE0',
+                        linen: '#F2EFE8',
+                        cream: '#FBF9F4',
+                        ink: '#1B2620',
+                        clay: '#C08457',
+                        clayDark: '#A66D42',
+                        gold: '#D4A574',
+                    },
+                    fontFamily: {
+                        heading: ['"Fraunces"', 'Georgia', 'serif'],
+                        body: ['"Inter"', 'system-ui', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        soft: '0 4px 20px -4px rgba(45,71,57,0.12)',
+                        lift: '0 20px 40px -12px rgba(45,71,57,0.22)',
+                        glow: '0 0 40px -8px rgba(192,132,87,0.35)',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family:'Inter',sans-serif; background-color:#FBF9F4; color:#33443B; -webkit-font-smoothing: antialiased; }
+
+        .hero-tint { background: linear-gradient(155deg, rgba(30,54,42,0.92) 0%, rgba(45,71,57,0.82) 45%, rgba(58,90,64,0.72) 100%); }
+        .hero-photo { filter: brightness(0.82) saturate(1.05); }
+
+        .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1); }
+        .reveal.on { opacity:1; transform:translateY(0); }
+        .reveal.delay-1 { transition-delay: 0.1s; }
+        .reveal.delay-2 { transition-delay: 0.2s; }
+        .reveal.delay-3 { transition-delay: 0.3s; }
+
+        .nav-link { position: relative; padding-bottom: 2px; }
+        .nav-link::after { content:''; position:absolute; bottom:-3px; left:0; width:0; height:1.5px; background:#C08457; transition:width 0.35s ease; }
+        .nav-link:hover::after { width:100%; }
+
+        .dropdown-content { visibility:hidden; opacity:0; transform:translateY(8px); transition:opacity 0.25s ease, transform 0.25s ease, visibility 0.25s; }
+        .group:hover .dropdown-content, .dropdown-wrapper.open .dropdown-content { visibility:visible; opacity:1; transform:translateY(0); }
+
+        .mobile-panel { transform:translateX(100%); transition:transform 0.45s cubic-bezier(0.4,0,0.2,1); }
+        .mobile-panel.on { transform:translateX(0); }
+        .submenu { max-height:0; overflow:hidden; transition:max-height 0.4s ease; }
+        .submenu.on { max-height:400px; }
+        .dropdown-toggle i { transition:transform 0.3s ease; }
+        .dropdown-toggle.on i { transform:rotate(180deg); }
+
+        .photo-zoom { overflow:hidden; }
+        .photo-zoom img { transition:transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+        .photo-zoom:hover img { transform:scale(1.06); }
+
+        .quote-mark { font-family:'Fraunces',serif; font-size:6rem; line-height:0.55; color:#CAD2C5; opacity:0.7; }
+
+        .marquee-track { display:flex; animation:slide 42s linear infinite; }
+        .marquee-track:hover { animation-play-state:paused; }
+        @keyframes slide { 0% { transform:translateX(0); } 100% { transform:translateX(-50%); } }
+
+        .btn-primary { position: relative; overflow: hidden; }
+        .btn-primary::before {
+            content:''; position:absolute; inset:0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.7s ease;
+        }
+        .btn-primary:hover::before { transform: translateX(100%); }
+
+        .stat-number { font-feature-settings: "tnum"; }
+
+        .decorative-line { height:1px; background: linear-gradient(90deg, transparent, #CAD2C5, transparent); }
+
+        .tag-pill {
+            display:inline-flex; align-items:center; gap:0.5rem;
+            font-size:12px; letter-spacing:0.12em; text-transform:uppercase;
+            color:#A66D42; font-weight:600;
+        }
+        .tag-pill::before {
+            content:''; display:inline-block; width:24px; height:1px; background:#C08457;
+        }
+
+        .image-frame { position: relative; }
+        .image-frame::before {
+            content:''; position:absolute; inset:-12px; border:1px solid #CAD2C5;
+            border-radius: 1rem; z-index:-1; transform: translate(12px, 12px);
+        }
+
+        input:focus, select:focus, textarea:focus { background-color: #fff; }
+
+        .card-lift { transition: transform 0.4s cubic-bezier(0.16,1,0.3,1), box-shadow 0.4s ease; }
+        .card-lift:hover { transform: translateY(-6px); box-shadow: 0 24px 40px -16px rgba(45,71,57,0.2); }
+
+        .pulse-dot { position: relative; }
+        .pulse-dot::after {
+            content:''; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+            width:100%; height:100%; border-radius:50%; background:rgba(143,175,143,0.4);
+            animation: pulse 2.4s ease-out infinite;
+        }
+        @keyframes pulse {
+            0% { transform:translate(-50%,-50%) scale(1); opacity:0.7; }
+            100% { transform:translate(-50%,-50%) scale(2.4); opacity:0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP CONTACT STRIP -->
+    <div class="hidden md:block bg-pine text-stone/85 text-[12.5px] border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-6 py-2.5 flex justify-between items-center">
+            <div class="flex items-center gap-7">
+                <a href="tel:+211924916124" class="flex items-center gap-2 hover:text-white transition">
+                    <i data-lucide="phone" class="w-3.5 h-3.5"></i> 0924 916 124
+                </a>
+                <span class="w-px h-3 bg-stone/20"></span>
+                <a href="mailto:kikijiorphanage@gmail.com" class="flex items-center gap-2 hover:text-white transition">
+                    <i data-lucide="mail" class="w-3.5 h-3.5"></i> kikijiorphanage@gmail.com
+                </a>
+            </div>
+            <div class="flex items-center gap-5">
+                <span class="flex items-center gap-2 text-stone/70">
+                    <i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Yei, Central Equatoria State
+                </span>
+                <span class="w-px h-3 bg-stone/20"></span>
+                <a href="https://youtube.com/@kikijiorphanagecenter-sout1973" target="_blank" rel="noopener" class="flex items-center gap-2 hover:text-white transition">
+                    <i data-lucide="youtube" class="w-3.5 h-3.5"></i> Watch
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <header id="siteHeader" class="sticky top-0 z-50 bg-cream/95 backdrop-blur-md border-b border-stone/50 transition-shadow duration-300">
+        <div class="max-w-6xl mx-auto px-5 md:px-6">
+            <div class="flex items-center justify-between h-[70px] md:h-[84px]">
+                <a href="#top" class="flex items-center gap-3 group shrink-0">
+                    <div class="w-11 h-11 md:w-12 md:h-12 rounded-2xl bg-gradient-to-br from-moss to-pine flex items-center justify-center shadow-soft ring-1 ring-fern/30 group-hover:scale-105 transition-transform">
+                        <i data-lucide="sprout" class="w-6 h-6 text-cream"></i>
+                    </div>
+                    <div class="leading-tight">
+                        <span class="block font-heading text-[17px] md:text-[19px] font-bold text-forest tracking-tight">Kikiji</span>
+                        <span class="block text-[9px] md:text-[10px] uppercase tracking-[0.18em] text-sage font-medium">National Orphanage Center</span>
+                    </div>
+                </a>
+
+                <nav class="hidden lg:flex items-center gap-7">
+                    <a href="#top" class="nav-link text-[13.5px] font-medium text-forest/85 hover:text-forest transition">Home</a>
+                    <a href="#about" class="nav-link text-[13.5px] font-medium text-forest/85 hover:text-forest transition">About</a>
+                    <a href="#children" class="nav-link text-[13.5px] font-medium text-forest/85 hover:text-forest transition">Our Children</a>
+                    <a href="#impact" class="nav-link text-[13.5px] font-medium text-forest/85 hover:text-forest transition">Impact</a>
+                    <a href="#updates" class="nav-link text-[13.5px] font-medium text-forest/85 hover:text-forest transition">Updates</a>
+                    <div class="group relative dropdown-wrapper">
+                        <button class="nav-link flex items-center gap-1 text-[13.5px] font-medium text-forest/85 hover:text-forest transition">
+                            Get Involved <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+                        </button>
+                        <div class="dropdown-content absolute left-0 top-full pt-4 w-64 z-40">
+                            <div class="bg-cream rounded-xl shadow-lift ring-1 ring-stone/50 overflow-hidden py-1.5">
+                                <a href="#sponsor" class="flex items-center gap-3 px-4 py-2.5 text-[13.5px] text-forest/85 hover:bg-linen hover:text-forest transition">
+                                    <i data-lucide="hand-heart" class="w-4 h-4 text-clay"></i> Sponsor a Child
+                                </a>
+                                <a href="#ways" class="flex items-center gap-3 px-4 py-2.5 text-[13.5px] text-forest/85 hover:bg-linen hover:text-forest transition">
+                                    <i data-lucide="gift" class="w-4 h-4 text-clay"></i> Other Ways to Give
+                                </a>
+                                <a href="#partner" class="flex items-center gap-3 px-4 py-2.5 text-[13.5px] text-forest/85 hover:bg-linen hover:text-forest transition">
+                                    <i data-lucide="building-2" class="w-4 h-4 text-clay"></i> Partner With Us
+                                </a>
+                                <a href="#visit" class="flex items-center gap-3 px-4 py-2.5 text-[13.5px] text-forest/85 hover:bg-linen hover:text-forest transition">
+                                    <i data-lucide="map-pin" class="w-4 h-4 text-clay"></i> Visit the Center
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="nav-link text-[13.5px] font-medium text-forest/85 hover:text-forest transition">Contact</a>
+                </nav>
+
+                <div class="hidden lg:block">
+                    <a href="#sponsor" class="btn-primary inline-flex items-center gap-2 bg-clay hover:bg-clayDark text-white text-[13px] font-semibold px-5 py-2.5 rounded-full transition shadow-soft hover:shadow-glow">
+                        <i data-lucide="hand-heart" class="w-4 h-4"></i> Sponsor a Child
+                    </a>
+                </div>
+
+                <button id="menuBtn" class="lg:hidden w-10 h-10 flex items-center justify-center text-forest rounded-lg hover:bg-linen transition" aria-label="Open menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <aside id="mobilePanel" class="mobile-panel fixed top-0 right-0 w-[85%] max-w-sm h-full bg-cream z-50 shadow-2xl overflow-y-auto">
+        <div class="flex items-center justify-between p-5 border-b border-stone/50 sticky top-0 bg-cream z-10">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-moss to-pine flex items-center justify-center">
+                    <i data-lucide="sprout" class="w-4 h-4 text-cream"></i>
+                </div>
+                <span class="font-heading font-bold text-forest">Kikiji</span>
+            </div>
+            <button id="menuClose" class="w-9 h-9 flex items-center justify-center text-sage hover:text-forest rounded-lg hover:bg-linen transition" aria-label="Close menu">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+        </div>
+        <nav class="px-5 py-5 space-y-0.5">
+            <a href="#top" class="block py-3 px-3 rounded-lg text-[15px] font-medium text-forest/85 hover:text-forest hover:bg-linen transition nav-close">Home</a>
+            <a href="#about" class="block py-3 px-3 rounded-lg text-[15px] font-medium text-forest/85 hover:text-forest hover:bg-linen transition nav-close">About</a>
+            <a href="#children" class="block py-3 px-3 rounded-lg text-[15px] font-medium text-forest/85 hover:text-forest hover:bg-linen transition nav-close">Our Children</a>
+            <a href="#impact" class="block py-3 px-3 rounded-lg text-[15px] font-medium text-forest/85 hover:text-forest hover:bg-linen transition nav-close">Impact</a>
+            <a href="#updates" class="block py-3 px-3 rounded-lg text-[15px] font-medium text-forest/85 hover:text-forest hover:bg-linen transition nav-close">Updates</a>
+            <div>
+                <button class="dropdown-toggle flex items-center justify-between w-full py-3 px-3 rounded-lg text-[15px] font-medium text-forest/85 hover:text-forest hover:bg-linen transition">
+                    Get Involved <i data-lucide="chevron-down" class="w-4 h-4"></i>
+                </button>
+                <div class="submenu pl-3">
+                    <a href="#sponsor" class="block py-2.5 px-3 text-[14px] text-sage hover:text-forest nav-close">Sponsor a Child</a>
+                    <a href="#ways" class="block py-2.5 px-3 text-[14px] text-sage hover:text-forest nav-close">Other Ways to Give</a>
+                    <a href="#partner" class="block py-2.5 px-3 text-[14px] text-sage hover:text-forest nav-close">Partner With Us</a>
+                    <a href="#visit" class="block py-2.5 px-3 text-[14px] text-sage hover:text-forest nav-close">Visit the Center</a>
+                </div>
+            </div>
+            <a href="#contact" class="block py-3 px-3 rounded-lg text-[15px] font-medium text-forest/85 hover:text-forest hover:bg-linen transition nav-close">Contact</a>
+        </nav>
+        <div class="px-5 pt-3 pb-8 border-t border-stone/50 space-y-3">
+            <a href="tel:+211924916124" class="flex items-center gap-3 text-[14px] text-forest py-2">
+                <i data-lucide="phone" class="w-4 h-4 text-clay"></i> 0924 916 124
+            </a>
+            <a href="mailto:kikijiorphanage@gmail.com" class="flex items-center gap-3 text-[13px] text-forest break-all py-2">
+                <i data-lucide="mail" class="w-4 h-4 text-clay flex-shrink-0"></i> kikijiorphanage@gmail.com
+            </a>
+            <a href="#sponsor" class="nav-close block text-center bg-clay hover:bg-clayDark text-white font-semibold py-3.5 rounded-full transition mt-3 shadow-soft">
+                Sponsor a Child
+            </a>
+        </div>
+    </aside>
+    <div id="menuShade" class="fixed inset-0 bg-ink/50 backdrop-blur-sm z-40 hidden"></div>
+
+    <main>
+
+        <!-- HERO -->
+        <section id="top" class="relative min-h-[92vh] flex items-center overflow-hidden">
+            <img src="images/kikiji-hero.jpg" alt="Children at Kikiji National Orphanage Center in Yei, South Sudan" class="hero-photo absolute inset-0 w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=compress&cs=tinysrgb&w=1920'">
+            <div class="hero-tint absolute inset-0"></div>
+
+            <!-- Decorative top elements -->
+            <div class="absolute top-10 right-10 w-40 h-40 border border-fern/20 rounded-full pointer-events-none hidden lg:block"></div>
+            <div class="absolute bottom-16 left-8 w-24 h-24 border border-clay/25 rounded-full pointer-events-none hidden lg:block"></div>
+
+            <div class="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full">
+                <div class="max-w-3xl text-cream">
+                    <div class="inline-flex items-center gap-2.5 bg-cream/8 backdrop-blur-sm border border-cream/15 rounded-full px-4 py-1.5 mb-7">
+                        <span class="pulse-dot w-2 h-2 bg-fern rounded-full"></span>
+                        <span class="text-[12px] tracking-wider uppercase text-cream/90 font-medium">Yei, Central Equatoria · South Sudan</span>
+                    </div>
+
+                    <h1 class="font-heading text-[2.4rem] sm:text-5xl md:text-6xl lg:text-[4.2rem] font-bold leading-[1.05] mb-7 tracking-tight">
+                        A home where every child<br class="hidden sm:inline">
+                        is <em class="italic font-normal text-gold">seen, loved</em>, and<br class="hidden sm:inline">
+                        given a chance to grow.
+                    </h1>
+
+                    <p class="text-[15.5px] md:text-[17px] leading-[1.7] text-cream/85 max-w-2xl mb-10">
+                        Kikiji National Orphanage Center was founded to give neglected and orphaned children in South Sudan something simple and steady: education, protection, and a place to belong. Since 2020, children in our care have been growing academically, spiritually, and in character.
+                    </p>
+
+                    <div class="flex flex-wrap gap-3 mb-14">
+                        <a href="#sponsor" class="btn-primary inline-flex items-center gap-2 bg-clay hover:bg-clayDark text-white font-semibold px-7 py-3.5 rounded-full transition shadow-lg hover:shadow-glow">
+                            Sponsor a Child <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#about" class="inline-flex items-center gap-2 border border-cream/35 hover:bg-cream/10 hover:border-cream/60 text-cream font-semibold px-7 py-3.5 rounded-full transition">
+                            Learn About Us
+                        </a>
+                    </div>
+
+                    <!-- Stat strip in hero -->
+                    <div class="grid grid-cols-3 gap-6 max-w-lg pt-8 border-t border-cream/15">
+                        <div>
+                            <p class="font-heading text-2xl md:text-3xl font-bold text-gold stat-number">2020</p>
+                            <p class="text-[11px] uppercase tracking-wider text-cream/60 mt-1">Serving since</p>
+                        </div>
+                        <div>
+                            <p class="font-heading text-2xl md:text-3xl font-bold text-gold stat-number">Yei</p>
+                            <p class="text-[11px] uppercase tracking-wider text-cream/60 mt-1">Our community</p>
+                        </div>
+                        <div>
+                            <p class="font-heading text-2xl md:text-3xl font-bold text-gold stat-number">100%</p>
+                            <p class="text-[11px] uppercase tracking-wider text-cream/60 mt-1">To the children</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
+                <a href="#about" class="text-cream/60 hover:text-cream transition">
+                    <i data-lucide="chevron-down" class="w-6 h-6"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- MARQUEE / AFFIRMATION STRIP -->
+        <section class="bg-linen border-b border-stone/50 py-5 overflow-hidden">
+            <div class="relative flex overflow-hidden">
+                <div class="marquee-track flex items-center gap-16 whitespace-nowrap pr-16">
+                    <span class="flex items-center gap-3 text-[13px] tracking-wide text-forest/70"><i data-lucide="sparkles" class="w-4 h-4 text-clay"></i> Leave no child behind</span>
+                    <span class="flex items-center gap-3 text-[13px] tracking-wide text-forest/70"><i data-lucide="heart" class="w-4 h-4 text-clay"></i> Every child deserves a home</span>
+                    <span class="flex items-center gap-3 text-[13px] tracking-wide text-forest/70"><i data-lucide="book-open" class="w-4 h-4 text-clay"></i> Education changes everything</span>
+                    <span class="flex items-center gap-3 text-[13px] tracking-wide text-forest/70"><i data-lucide="shield-check" class="w-4 h-4 text-clay"></i> Protection is a right</span>
+                    <span class="flex items-center gap-3 text-[13px] tracking-wide text-forest/70"><i data-lucide="users" class="w-4 h-4 text-clay"></i> They need love</span>
+                    <span class="flex items-center gap-3 text-[13px] tracking-wide text-forest/70"><i data-lucide="sparkles" class="w-4 h-4 text-clay"></i> Leave no child behind</span>
+                    <span class="flex items-center gap-3 text-[13px] tracking-wide text-forest/70"><i data-lucide="heart" class="w-4 h-4 text-clay"></i> Every child deserves a home</span>
+                    <span class="flex items-center gap-3 text-[13px] tracking-wide text-forest/70"><i data-lucide="book-open" class="w-4 h-4 text-clay"></i> Education changes everything</span>
+                    <span class="flex items-center gap-3 text-[13px] tracking-wide text-forest/70"><i data-lucide="shield-check" class="w-4 h-4 text-clay"></i> Protection is a right</span>
+                    <span class="flex items-center gap-3 text-[13px] tracking-wide text-forest/70"><i data-lucide="users" class="w-4 h-4 text-clay"></i> They need love</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="py-24 md:py-32 bg-cream relative overflow-hidden">
+            <div class="absolute top-32 right-0 w-80 h-80 bg-fern/5 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-6xl mx-auto px-6 relative">
+                <div class="grid lg:grid-cols-12 gap-14 lg:gap-20 items-center">
+                    <div class="lg:col-span-5 reveal image-frame">
+                        <div class="photo-zoom rounded-2xl overflow-hidden shadow-lift">
+                            <img src="images/kikiji-about.jpg" alt="Children at the Kikiji center" class="w-full h-[420px] md:h-[560px] object-cover" onerror="this.src='https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'">
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-7 reveal delay-1">
+                        <span class="tag-pill mb-5">Who We Are</span>
+                        <h2 class="font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-forest leading-[1.15] mb-7 tracking-tight">
+                            An organization built around children, not around paperwork.
+                        </h2>
+
+                        <p class="text-[15.5px] leading-[1.75] text-forest/80 mb-5">
+                            Kikiji National Orphanage Center was formed with an executive committee and a clear purpose: to provide education and emergency protection to neglected children in South Sudan.
+                        </p>
+                        <p class="text-[15.5px] leading-[1.75] text-forest/80 mb-9">
+                            Our team in Yei works with the children every day. We are not a large institution. We are a small, close group of staff and volunteers who know each child by name, follow their schooling, and sit with them through the difficult days as well as the good ones.
+                        </p>
+
+                        <!-- Four pillars -->
+                        <div class="grid sm:grid-cols-2 gap-5 mb-9">
+                            <div class="bg-linen rounded-xl p-5 border border-stone/40 hover:border-fern/50 hover:bg-mist/60 transition-colors group">
+                                <div class="flex items-center gap-3 mb-2.5">
+                                    <i data-lucide="book-open" class="w-5 h-5 text-moss group-hover:text-clay transition-colors"></i>
+                                    <p class="font-semibold text-forest text-[14.5px]">Education</p>
+                                </div>
+                                <p class="text-[13.5px] text-sage leading-relaxed">School fees, uniforms, and study support for every child in our care.</p>
+                            </div>
+                            <div class="bg-linen rounded-xl p-5 border border-stone/40 hover:border-fern/50 hover:bg-mist/60 transition-colors group">
+                                <div class="flex items-center gap-3 mb-2.5">
+                                    <i data-lucide="shield-check" class="w-5 h-5 text-moss group-hover:text-clay transition-colors"></i>
+                                    <p class="font-semibold text-forest text-[14.5px]">Protection</p>
+                                </div>
+                                <p class="text-[13.5px] text-sage leading-relaxed">Emergency care and case follow-up for neglected and at-risk children.</p>
+                            </div>
+                            <div class="bg-linen rounded-xl p-5 border border-stone/40 hover:border-fern/50 hover:bg-mist/60 transition-colors group">
+                                <div class="flex items-center gap-3 mb-2.5">
+                                    <i data-lucide="users" class="w-5 h-5 text-moss group-hover:text-clay transition-colors"></i>
+                                    <p class="font-semibold text-forest text-[14.5px]">Mentorship</p>
+                                </div>
+                                <p class="text-[13.5px] text-sage leading-relaxed">Regular guidance from visitors, staff, and community role models.</p>
+                            </div>
+                            <div class="bg-linen rounded-xl p-5 border border-stone/40 hover:border-fern/50 hover:bg-mist/60 transition-colors group">
+                                <div class="flex items-center gap-3 mb-2.5">
+                                    <i data-lucide="heart" class="w-5 h-5 text-moss group-hover:text-clay transition-colors"></i>
+                                    <p class="font-semibold text-forest text-[14.5px]">Belonging</p>
+                                </div>
+                                <p class="text-[13.5px] text-sage leading-relaxed">A family atmosphere where children are heard and cared for.</p>
+                            </div>
+                        </div>
+
+                        <a href="#sponsor" class="inline-flex items-center gap-2 text-moss font-semibold text-[14.5px] hover:text-clay transition group">
+                            See how you can help
+                            <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IMPACT STRIP -->
+        <section id="impact" class="bg-forest text-cream py-20 md:py-24 relative overflow-hidden">
+            <div class="absolute inset-0 opacity-[0.04]" style="background-image: radial-gradient(circle, #CAD2C5 1px, transparent 1px); background-size: 32px 32px;"></div>
+
+            <div class="max-w-6xl mx-auto px-6 relative">
+                <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                    <span class="tag-pill mb-5" style="color:#D4A574;">
+                        <span style="background:#D4A574;"></span> Our Impact
+                    </span>
+                    <h2 class="font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-cream leading-tight mb-5 tracking-tight">
+                        Steady work, done quietly, for children who need us.
+                    </h2>
+                    <p class="text-[15.5px] leading-relaxed text-cream/75">
+                        These are not big numbers. But each one represents a child who is safe, learning, and growing.
+                    </p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-cream/5 backdrop-blur-sm border border-cream/10 rounded-2xl p-7 reveal hover:bg-cream/8 transition-colors">
+                        <i data-lucide="home" class="w-8 h-8 text-gold mb-5"></i>
+                        <p class="font-heading text-4xl font-bold text-cream mb-2 stat-number" data-count="25">25+</p>
+                        <p class="text-[13px] uppercase tracking-wider text-cream/60">Children in our care</p>
+                        <p class="text-[13px] text-cream/70 mt-3 leading-relaxed">Each with their own story, their own school, their own dream.</p>
+                    </div>
+
+                    <div class="bg-cream/5 backdrop-blur-sm border border-cream/10 rounded-2xl p-7 reveal delay-1 hover:bg-cream/8 transition-colors">
+                        <i data-lucide="graduation-cap" class="w-8 h-8 text-gold mb-5"></i>
+                        <p class="font-heading text-4xl font-bold text-cream mb-2 stat-number">2021</p>
+                        <p class="text-[13px] uppercase tracking-wider text-cream/60">Longest enrolled</p>
+                        <p class="text-[13px] text-cream/70 mt-3 leading-relaxed">Some children have been with us since we opened our doors.</p>
+                    </div>
+
+                    <div class="bg-cream/5 backdrop-blur-sm border border-cream/10 rounded-2xl p-7 reveal delay-2 hover:bg-cream/8 transition-colors">
+                        <i data-lucide="award" class="w-8 h-8 text-gold mb-5"></i>
+                        <p class="font-heading text-4xl font-bold text-cream mb-2 stat-number">Top 10</p>
+                        <p class="text-[13px] uppercase tracking-wider text-cream/60">Ranked in Yei County</p>
+                        <p class="text-[13px] text-cream/70 mt-3 leading-relaxed">One of our boys placed among the best performers in the county last year.</p>
+                    </div>
+
+                    <div class="bg-cream/5 backdrop-blur-sm border border-cream/10 rounded-2xl p-7 reveal delay-3 hover:bg-cream/8 transition-colors">
+                        <i data-lucide="shield-check" class="w-8 h-8 text-gold mb-5"></i>
+                        <p class="font-heading text-4xl font-bold text-cream mb-2 stat-number">UNMISS</p>
+                        <p class="text-[13px] uppercase tracking-wider text-cream/60">Trained staff</p>
+                        <p class="text-[13px] text-cream/70 mt-3 leading-relaxed">Our team is trained in child protection standards and case reporting.</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-14 reveal">
+                    <a href="#children" class="inline-flex items-center gap-2 bg-clay hover:bg-clayDark text-white font-semibold px-7 py-3.5 rounded-full transition shadow-lg hover:shadow-glow">
+                        Meet the children <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHILDREN -->
+        <section id="children" class="py-24 md:py-32 bg-linen">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="max-w-2xl mb-16 reveal">
+                    <span class="tag-pill mb-5">Our Children</span>
+                    <h2 class="font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-forest leading-[1.15] mb-5 tracking-tight">
+                        Every child here has a name, a story, and a future worth protecting.
+                    </h2>
+                    <p class="text-[15.5px] leading-[1.75] text-forest/80">
+                        These are a few of the children in our care. They came to Kikiji at different ages and different moments in their lives. Today they are students, leaders, and friends to each other.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+
+                    <!-- Maya -->
+                    <article class="bg-cream rounded-2xl overflow-hidden shadow-soft ring-1 ring-stone/40 reveal card-lift">
+                        <div class="photo-zoom h-72">
+                            <img src="images/kikiji-maya.jpg" alt="Maya, head prefect at Kikiji" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'">
+                        </div>
+                        <div class="p-7 md:p-8">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="text-[11px] uppercase tracking-[0.15em] text-clay font-semibold">Since 2021</span>
+                                <span class="w-1 h-1 rounded-full bg-sage"></span>
+                                <span class="text-[11px] uppercase tracking-[0.15em] text-sage">Head Prefect</span>
+                            </div>
+                            <h3 class="font-heading text-2xl font-bold text-forest mb-4">Maya</h3>
+                            <p class="text-[14.5px] leading-[1.75] text-forest/80 mb-6">
+                                Maya is the head prefect at her school. Leadership has helped her find her voice and build confidence. She is growing academically and spiritually, and she has a clear dream for her life.
+                            </p>
+                            <div class="border-l-[3px] border-clay pl-5 py-1">
+                                <p class="font-heading text-[15.5px] italic text-forest/90 leading-[1.7]">
+                                    "I want to become a doctor to help other people and provide free medication to orphans."
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Anthony Adide -->
+                    <article class="bg-cream rounded-2xl overflow-hidden shadow-soft ring-1 ring-stone/40 reveal delay-1 card-lift">
+                        <div class="photo-zoom h-72">
+                            <img src="images/kikiji-anthony.jpg" alt="Anthony Adide at Kikiji" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'">
+                        </div>
+                        <div class="p-7 md:p-8">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="text-[11px] uppercase tracking-[0.15em] text-clay font-semibold">Since 2021</span>
+                                <span class="w-1 h-1 rounded-full bg-sage"></span>
+                                <span class="text-[11px] uppercase tracking-[0.15em] text-sage">Age 13</span>
+                            </div>
+                            <h3 class="font-heading text-2xl font-bold text-forest mb-4">Anthony Adide</h3>
+                            <p class="text-[14.5px] leading-[1.75] text-forest/80 mb-6">
+                                Anthony is 13 and dreams of becoming a pilot. Since joining Kikiji in 2021 he has been progressing in his studies and in his faith. He is one of the children currently waiting for a sponsor.
+                            </p>
+                            <div class="border-l-[3px] border-clay pl-5 py-1">
+                                <p class="font-heading text-[15.5px] italic text-forest/90 leading-[1.7]">
+                                    "I don't know without Kikiji, where could I be."
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Data Calvin -->
+                    <article class="bg-cream rounded-2xl overflow-hidden shadow-soft ring-1 ring-stone/40 reveal card-lift">
+                        <div class="photo-zoom h-72">
+                            <img src="images/kikiji-calvin.jpg" alt="Data Calvin at Kikiji" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'">
+                        </div>
+                        <div class="p-7 md:p-8">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="text-[11px] uppercase tracking-[0.15em] text-clay font-semibold">Since 2020</span>
+                                <span class="w-1 h-1 rounded-full bg-sage"></span>
+                                <span class="text-[11px] uppercase tracking-[0.15em] text-sage">Age 13</span>
+                            </div>
+                            <h3 class="font-heading text-2xl font-bold text-forest mb-4">Data Calvin</h3>
+                            <p class="text-[14.5px] leading-[1.75] text-forest/80 mb-6">
+                                Calvin joined Kikiji in 2020. Last year he ranked among the top ten best performing students in Yei River County. His dedication has been an encouragement to the whole team.
+                            </p>
+                            <div class="border-l-[3px] border-clay pl-5 py-1">
+                                <p class="font-heading text-[15.5px] italic text-forest/90 leading-[1.7]">
+                                    Still waiting for a sponsor.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Scovia and Kiden -->
+                    <article class="bg-cream rounded-2xl overflow-hidden shadow-soft ring-1 ring-stone/40 reveal delay-1 card-lift">
+                        <div class="photo-zoom h-72">
+                            <img src="images/kikiji-girls.jpg" alt="Scovia and Kiden at Kikiji" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'">
+                        </div>
+                        <div class="p-7 md:p-8">
+                            <div class="flex items-center gap-3 mb-3">
+                                <span class="text-[11px] uppercase tracking-[0.15em] text-clay font-semibold">In our care</span>
+                                <span class="w-1 h-1 rounded-full bg-sage"></span>
+                                <span class="text-[11px] uppercase tracking-[0.15em] text-sage">Since childhood</span>
+                            </div>
+                            <h3 class="font-heading text-2xl font-bold text-forest mb-4">Scovia and Kiden</h3>
+                            <p class="text-[14.5px] leading-[1.75] text-forest/80">
+                                Scovia and Kiden joined Kikiji at a young age. They have been growing steadily in their development, and they have recently started their secondary education. We are proud of the young women they are becoming.
+                            </p>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="mt-14 text-center reveal">
+                    <p class="text-[14px] text-sage mb-5">Every child at Kikiji deserves a sponsor who will walk with them.</p>
+                    <a href="#sponsor" class="inline-flex items-center gap-2 bg-forest hover:bg-pine text-cream font-semibold px-7 py-3.5 rounded-full transition shadow-soft">
+                        Sponsor a Child Today <i data-lucide="hand-heart" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPONSOR A CHILD -->
+        <section id="sponsor" class="relative py-24 md:py-32 overflow-hidden">
+            <img src="images/kikiji-sponsor.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=compress&cs=tinysrgb&w=1920'">
+            <div class="absolute inset-0" style="background:linear-gradient(150deg, rgba(30,54,42,0.95) 0%, rgba(45,71,57,0.9) 100%);"></div>
+
+            <div class="relative z-10 max-w-6xl mx-auto px-6 text-cream">
+                <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
+                    <div class="reveal">
+                        <span class="tag-pill mb-5" style="color:#D4A574;">
+                            <span style="background:#D4A574;"></span> Sponsor a Child
+                        </span>
+                        <h2 class="font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-[1.15] mb-7 tracking-tight">
+                            Some of our children are still waiting for someone to stand with them.
+                        </h2>
+                        <p class="text-[15.5px] leading-[1.8] text-cream/85 mb-5">
+                            A sponsor does not need to carry a heavy load. What each child needs most is steady support: school fees, learning materials, food, and someone who believes in them over the long run.
+                        </p>
+                        <p class="text-[15.5px] leading-[1.8] text-cream/85 mb-9">
+                            If you would like to sponsor Anthony, Data Calvin, or another child in our care, please reach out. We will share their story with you and explain exactly how your support is used.
+                        </p>
+
+                        <div class="flex flex-wrap gap-3">
+                            <a href="mailto:kikijiorphanage@gmail.com" class="inline-flex items-center gap-2 bg-clay hover:bg-clayDark text-white font-semibold px-6 py-3.5 rounded-full transition shadow-lg hover:shadow-glow">
+                                <i data-lucide="mail" class="w-4 h-4"></i> Email the team
+                            </a>
+                            <a href="tel:+211924916124" class="inline-flex items-center gap-2 border border-cream/35 hover:bg-cream/10 hover:border-cream/60 text-cream font-semibold px-6 py-3.5 rounded-full transition">
+                                <i data-lucide="phone" class="w-4 h-4"></i> Call 0924 916 124
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="reveal delay-2">
+                        <div class="bg-cream/97 backdrop-blur rounded-2xl p-8 md:p-9 shadow-lift">
+                            <div class="flex items-center gap-3 mb-6">
+                                <div class="w-11 h-11 rounded-xl bg-linen flex items-center justify-center">
+                                    <i data-lucide="hand-heart" class="w-5 h-5 text-clay"></i>
+                                </div>
+                                <h3 class="font-heading text-xl font-bold text-forest">What sponsorship covers</h3>
+                            </div>
+
+                            <ul class="space-y-5">
+                                <li class="flex items-start gap-4">
+                                    <div class="w-9 h-9 rounded-full bg-linen flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i data-lucide="graduation-cap" class="w-4 h-4 text-moss"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-forest text-[14.5px] mb-1">School fees and materials</p>
+                                        <p class="text-[13.5px] text-sage leading-relaxed">Fees, uniforms, books, and stationery for the full school year.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="w-9 h-9 rounded-full bg-linen flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i data-lucide="utensils" class="w-4 h-4 text-moss"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-forest text-[14.5px] mb-1">Daily meals</p>
+                                        <p class="text-[13.5px] text-sage leading-relaxed">Nutritious food so the child can learn and grow without hunger.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="w-9 h-9 rounded-full bg-linen flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i data-lucide="heart-pulse" class="w-4 h-4 text-moss"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-forest text-[14.5px] mb-1">Care and follow-up</p>
+                                        <p class="text-[13.5px] text-sage leading-relaxed">Health needs, mentoring, and regular check-ins with staff.</p>
+                                    </div>
+                                </li>
+                                <li class="flex items-start gap-4">
+                                    <div class="w-9 h-9 rounded-full bg-linen flex items-center justify-center flex-shrink-0 mt-0.5">
+                                        <i data-lucide="home" class="w-4 h-4 text-moss"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold text-forest text-[14.5px] mb-1">A stable place to live</p>
+                                        <p class="text-[13.5px] text-sage leading-relaxed">A safe home within our center or with supported family care.</p>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="mt-7 pt-6 border-t border-stone/50">
+                                <p class="text-[12.5px] text-sage leading-relaxed italic">
+                                    To begin a sponsorship or ask questions, email us at <a href="mailto:kikijiorphanage@gmail.com" class="text-clay font-medium hover:underline">kikijiorphanage@gmail.com</a>.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- OTHER WAYS TO GIVE -->
+        <section id="ways" class="py-24 md:py-32 bg-cream">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="max-w-2xl mb-16 reveal">
+                    <span class="tag-pill mb-5">Ways to Give</span>
+                    <h2 class="font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-forest leading-[1.15] mb-5 tracking-tight">
+                        Not everyone can sponsor a child. Everyone can help in some way.
+                    </h2>
+                    <p class="text-[15.5px] leading-[1.75] text-forest/80">
+                        If sponsorship is not for you right now, there are still meaningful ways to stand with the children at Kikiji.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-7">
+
+                    <div class="bg-linen rounded-2xl p-8 border border-stone/40 reveal card-lift">
+                        <div class="w-12 h-12 rounded-xl bg-cream flex items-center justify-center mb-6 shadow-soft">
+                            <i data-lucide="package" class="w-5 h-5 text-clay"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-forest mb-3">Give in kind</h3>
+                        <p class="text-[14px] leading-[1.7] text-forest/75 mb-6">
+                            We welcome donations of school supplies, clothing, shoes, bedding, books, hygiene items, and non-perishable food.
+                        </p>
+                        <a href="#contact" class="text-clay font-semibold text-[13.5px] inline-flex items-center gap-1.5 hover:gap-2.5 transition-all">
+                            Arrange a donation <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+
+                    <div class="bg-linen rounded-2xl p-8 border border-stone/40 reveal card-lift delay-1">
+                        <div class="w-12 h-12 rounded-xl bg-cream flex items-center justify-center mb-6 shadow-soft">
+                            <i data-lucide="users" class="w-5 h-5 text-clay"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-forest mb-3">Volunteer your time</h3>
+                        <p class="text-[14px] leading-[1.7] text-forest/75 mb-6">
+                            Teachers, tutors, mentors, and anyone with a skill to share is welcome. Even a few hours a month matters.
+                        </p>
+                        <a href="#contact" class="text-clay font-semibold text-[13.5px] inline-flex items-center gap-1.5 hover:gap-2.5 transition-all">
+                            Offer to volunteer <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+
+                    <div class="bg-linen rounded-2xl p-8 border border-stone/40 reveal card-lift delay-2">
+                        <div class="w-12 h-12 rounded-xl bg-cream flex items-center justify-center mb-6 shadow-soft">
+                            <i data-lucide="megaphone" class="w-5 h-5 text-clay"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-forest mb-3">Share our story</h3>
+                        <p class="text-[14px] leading-[1.7] text-forest/75 mb-6">
+                            Sometimes the simplest help is telling others. Share our page with your church, your workplace, or your friends.
+                        </p>
+                        <a href="https://youtube.com/@kikijiorphanagecenter-sout1973" target="_blank" rel="noopener" class="text-clay font-semibold text-[13.5px] inline-flex items-center gap-1.5 hover:gap-2.5 transition-all">
+                            Watch and share <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- UPDATES -->
+        <section id="updates" class="py-24 md:py-32 bg-linen">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="flex flex-wrap items-end justify-between gap-6 mb-14 reveal">
+                    <div class="max-w-xl">
+                        <span class="tag-pill mb-5">Updates</span>
+                        <h2 class="font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-forest leading-[1.15] mb-4 tracking-tight">
+                            News from the center and the community around us.
+                        </h2>
+                        <p class="text-[15.5px] leading-relaxed text-forest/80">
+                            A few things that have happened recently, written the way we would tell a friend.
+                        </p>
+                    </div>
+                    <a href="https://youtube.com/@kikijiorphanagecenter-sout1973" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-moss font-semibold text-[14px] hover:text-clay transition group">
+                        More on YouTube <i data-lucide="external-link" class="w-4 h-4 group-hover:translate-x-0.5 transition-transform"></i>
+                    </a>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-7">
+
+                    <article class="bg-cream rounded-2xl p-7 border border-stone/40 reveal card-lift">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-linen flex items-center justify-center">
+                                <i data-lucide="star" class="w-4.5 h-4.5 text-clay"></i>
+                            </div>
+                            <span class="text-[11px] uppercase tracking-[0.14em] text-sage font-medium">10 August 2026</span>
+                        </div>
+                        <h3 class="font-heading text-lg font-bold text-forest mb-3 leading-snug">A visit from Eng. Lemi William</h3>
+                        <p class="text-[13.8px] leading-[1.75] text-forest/80">
+                            We were honored to receive Eng. Lemi William, CEO of Point Investment Company. He spent the day with the children and shared his own story. His words reminded everyone that present circumstances do not define a future.
+                        </p>
+                    </article>
+
+                    <article class="bg-cream rounded-2xl p-7 border border-stone/40 reveal card-lift delay-1">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-linen flex items-center justify-center">
+                                <i data-lucide="shield-check" class="w-4.5 h-4.5 text-clay"></i>
+                            </div>
+                            <span class="text-[11px] uppercase tracking-[0.14em] text-sage font-medium">3 July 2026</span>
+                        </div>
+                        <h3 class="font-heading text-lg font-bold text-forest mb-3 leading-snug">Child protection training with UNMISS</h3>
+                        <p class="text-[13.8px] leading-[1.75] text-forest/80">
+                            Our Executive Director attended child protection training organized by UNMISS in Juba. The session covered how to identify and respond to threats against children, national child safety policies, case reporting, and the Monitoring and Reporting Mechanism.
+                        </p>
+                    </article>
+
+                    <article class="bg-cream rounded-2xl p-7 border border-stone/40 reveal card-lift delay-2">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-10 h-10 rounded-xl bg-linen flex items-center justify-center">
+                                <i data-lucide="sun" class="w-4.5 h-4.5 text-clay"></i>
+                            </div>
+                            <span class="text-[11px] uppercase tracking-[0.14em] text-sage font-medium">16 June 2026</span>
+                        </div>
+                        <h3 class="font-heading text-lg font-bold text-forest mb-3 leading-snug">Day of the African Child</h3>
+                        <p class="text-[13.8px] leading-[1.75] text-forest/80">
+                            On the Day of the African Child we reaffirmed that every child in South Sudan has the right to grow up safe, healthy, and free from harm. We also named the hard truth that too many children still suffer because of conflict, displacement, and poverty.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- QUOTE / TESTIMONIAL -->
+        <section class="py-24 md:py-28 bg-cream">
+            <div class="max-w-3xl mx-auto px-6 text-center reveal">
+                <p class="quote-mark mb-3">"</p>
+                <p class="font-heading text-2xl md:text-[30px] leading-[1.4] text-forest mb-7 tracking-tight">
+                    This is a beautiful message to everyone. Not just our children in our care.
+                </p>
+                <div class="decorative-line w-24 mx-auto mb-5"></div>
+                <p class="text-[13px] uppercase tracking-[0.15em] text-sage">A note from the Kikiji team after a mentorship session</p>
+            </div>
+        </section>
+
+        <!-- PARTNERS -->
+        <section id="partner" class="py-20 md:py-24 bg-linen border-y border-stone/50">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="text-center mb-12 reveal">
+                    <span class="tag-pill mb-5 inline-flex">Partners and Friends</span>
+                    <h2 class="font-heading text-2xl md:text-3xl font-bold text-forest mb-4 tracking-tight">
+                        Organizations we work alongside and learn from.
+                    </h2>
+                    <p class="text-[14.5px] text-sage max-w-xl mx-auto leading-relaxed">
+                        We are grateful for the guidance and partnership of these organizations who share our commitment to children.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-5 reveal">
+                    <div class="bg-cream rounded-xl py-6 px-4 text-center border border-stone/40 hover:border-fern/50 hover:shadow-soft transition-all">
+                        <p class="font-heading text-[14.5px] text-forest/80 font-semibold">UNMISS</p>
+                    </div>
+                    <div class="bg-cream rounded-xl py-6 px-4 text-center border border-stone/40 hover:border-fern/50 hover:shadow-soft transition-all">
+                        <p class="font-heading text-[14.5px] text-forest/80 font-semibold">UNICEF South Sudan</p>
+                    </div>
+                    <div class="bg-cream rounded-xl py-6 px-4 text-center border border-stone/40 hover:border-fern/50 hover:shadow-soft transition-all">
+                        <p class="font-heading text-[14.5px] text-forest/80 font-semibold">Save the Children</p>
+                    </div>
+                    <div class="bg-cream rounded-xl py-6 px-4 text-center border border-stone/40 hover:border-fern/50 hover:shadow-soft transition-all">
+                        <p class="font-heading text-[14.5px] text-forest/80 font-semibold">UNHCR South Sudan</p>
+                    </div>
+                    <div class="bg-cream rounded-xl py-6 px-4 text-center border border-stone/40 hover:border-fern/50 hover:shadow-soft transition-all">
+                        <p class="font-heading text-[14.5px] text-forest/80 font-semibold">Education Cannot Wait</p>
+                    </div>
+                    <div class="bg-cream rounded-xl py-6 px-4 text-center border border-stone/40 hover:border-fern/50 hover:shadow-soft transition-all">
+                        <p class="font-heading text-[14.5px] text-forest/80 font-semibold">MTN South Sudan</p>
+                    </div>
+                    <div class="bg-cream rounded-xl py-6 px-4 text-center border border-stone/40 hover:border-fern/50 hover:shadow-soft transition-all">
+                        <p class="font-heading text-[14.5px] text-forest/80 font-semibold">South Sudan NGO Forum</p>
+                    </div>
+                    <div class="bg-cream rounded-xl py-6 px-4 text-center border border-stone/40 hover:border-fern/50 hover:shadow-soft transition-all">
+                        <p class="font-heading text-[14.5px] text-forest/80 font-semibold">Point Investment Co.</p>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12 reveal">
+                    <p class="text-[14.5px] text-forest/80 mb-5">Interested in partnering with Kikiji?</p>
+                    <a href="#contact" class="inline-flex items-center gap-2 bg-forest hover:bg-pine text-cream font-semibold px-7 py-3.5 rounded-full transition shadow-soft">
+                        Talk to us <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISIT / CONTACT -->
+        <section id="visit" class="py-24 md:py-32 bg-cream">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-start">
+
+                    <div class="reveal">
+                        <span class="tag-pill mb-5">Visit Us</span>
+                        <h2 class="font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-forest leading-[1.15] mb-6 tracking-tight">
+                            You are welcome to come and see the work for yourself.
+                        </h2>
+                        <p class="text-[15.5px] leading-[1.8] text-forest/80 mb-10">
+                            If you are in Yei or passing through, please reach out before visiting so we can prepare. We are always happy to welcome individuals, church groups, and organizations who want to spend time with the children.
+                        </p>
+
+                        <div class="space-y-6">
+
+                            <div class="flex items-start gap-5">
+                                <div class="w-12 h-12 rounded-2xl bg-linen border border-stone/40 flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="map-pin" class="w-5 h-5 text-moss"></i>
+                                </div>
+                                <div class="pt-1">
+                                    <p class="text-[12px] uppercase tracking-[0.14em] text-sage font-medium mb-1.5">Our Location</p>
+                                    <p class="text-[15px] text-forest font-medium">Yei, Central Equatoria State, South Sudan</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-5">
+                                <div class="w-12 h-12 rounded-2xl bg-linen border border-stone/40 flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="phone" class="w-5 h-5 text-moss"></i>
+                                </div>
+                                <div class="pt-1">
+                                    <p class="text-[12px] uppercase tracking-[0.14em] text-sage font-medium mb-1.5">Phone</p>
+                                    <a href="tel:+211924916124" class="text-[15px] text-forest font-medium hover:text-clay transition">0924 916 124</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-5">
+                                <div class="w-12 h-12 rounded-2xl bg-linen border border-stone/40 flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="mail" class="w-5 h-5 text-moss"></i>
+                                </div>
+                                <div class="pt-1">
+                                    <p class="text-[12px] uppercase tracking-[0.14em] text-sage font-medium mb-1.5">Email</p>
+                                    <a href="mailto:kikijiorphanage@gmail.com" class="text-[15px] text-forest font-medium hover:text-clay transition break-all">kikijiorphanage@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-5">
+                                <div class="w-12 h-12 rounded-2xl bg-linen border border-stone/40 flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="globe" class="w-5 h-5 text-moss"></i>
+                                </div>
+                                <div class="pt-1">
+                                    <p class="text-[12px] uppercase tracking-[0.14em] text-sage font-medium mb-1.5">Website</p>
+                                    <a href="https://kikijiorphanage.org" target="_blank" rel="noopener" class="text-[15px] text-forest font-medium hover:text-clay transition">kikijiorphanage.org</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-5">
+                                <div class="w-12 h-12 rounded-2xl bg-linen border border-stone/40 flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="youtube" class="w-5 h-5 text-moss"></i>
+                                </div>
+                                <div class="pt-1">
+                                    <p class="text-[12px] uppercase tracking-[0.14em] text-sage font-medium mb-1.5">YouTube</p>
+                                    <a href="https://youtube.com/@kikijiorphanagecenter-sout1973" target="_blank" rel="noopener" class="text-[15px] text-forest font-medium hover:text-clay transition">Kikiji National Orphanage Center</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="contact" class="reveal delay-2">
+                        <div class="bg-linen rounded-2xl p-7 md:p-9 shadow-lift border border-stone/40">
+                            <div class="mb-6">
+                                <h3 class="font-heading text-2xl font-bold text-forest mb-2">Send a message</h3>
+                                <p class="text-[13.5px] text-sage leading-relaxed">We answer every message. Please allow a day or two for a reply.</p>
+                            </div>
+
+                            <form id="contactForm" class="space-y-4">
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-[12.5px] font-medium text-forest/70 mb-1.5">Your name</label>
+                                        <input type="text" required placeholder="Full name" class="w-full px-4 py-3 rounded-xl border border-stone bg-cream text-[14px] text-forest placeholder-sage/60 focus:border-moss focus:ring-2 focus:ring-moss/15 outline-none transition" />
+                                    </div>
+                                    <div>
+                                        <label class="block text-[12.5px] font-medium text-forest/70 mb-1.5">Email</label>
+                                        <input type="email" required placeholder="you@example.com" class="w-full px-4 py-3 rounded-xl border border-stone bg-cream text-[14px] text-forest placeholder-sage/60 focus:border-moss focus:ring-2 focus:ring-moss/15 outline-none transition" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-[12.5px] font-medium text-forest/70 mb-1.5">What is this about?</label>
+                                    <select class="w-full px-4 py-3 rounded-xl border border-stone bg-cream text-[14px] text-forest focus:border-moss focus:ring-2 focus:ring-moss/15 outline-none transition">
+                                        <option disabled selected>Choose a topic</option>
+                                        <option>Sponsor a child</option>
+                                        <option>In-kind donation</option>
+                                        <option>Volunteer</option>
+                                        <option>Partnership</option>
+                                        <option>Visit the center</option>
+                                        <option>General question</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-[12.5px] font-medium text-forest/70 mb-1.5">Message</label>
+                                    <textarea required rows="5" placeholder="Write your message here..." class="w-full px-4 py-3 rounded-xl border border-stone bg-cream text-[14px] text-forest placeholder-sage/60 focus:border-moss focus:ring-2 focus:ring-moss/15 outline-none resize-none transition"></textarea>
+                                </div>
+                                <button type="submit" class="btn-primary w-full bg-moss hover:bg-forest text-cream font-semibold py-3.5 rounded-xl transition flex items-center justify-center gap-2 shadow-soft">
+                                    Send message <i data-lucide="send" class="w-4 h-4"></i>
+                                </button>
+                                <p class="text-[11.5px] text-sage text-center pt-1">
+                                    Prefer to call? <a href="tel:+211924916124" class="text-clay font-medium hover:underline">0924 916 124</a>
+                                </p>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section class="relative py-20 md:py-24 overflow-hidden bg-pine">
+            <div class="absolute inset-0 opacity-[0.06]" style="background-image: radial-gradient(circle, #CAD2C5 1.2px, transparent 1.2px); background-size: 28px 28px;"></div>
+
+            <div class="max-w-4xl mx-auto px-6 text-center relative reveal">
+                <i data-lucide="heart" class="w-10 h-10 text-clay mx-auto mb-6"></i>
+                <h2 class="font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-cream leading-[1.2] mb-6 tracking-tight">
+                    Every child here deserves a future. You can be part of it.
+                </h2>
+                <p class="text-[15.5px] leading-[1.75] text-cream/80 max-w-2xl mx-auto mb-10">
+                    Whether you sponsor a child, share our story, or send a message of encouragement, you become part of the Kikiji family.
+                </p>
+                <div class="flex flex-wrap justify-center gap-3">
+                    <a href="#sponsor" class="inline-flex items-center gap-2 bg-clay hover:bg-clayDark text-white font-semibold px-7 py-3.5 rounded-full transition shadow-lg hover:shadow-glow">
+                        <i data-lucide="hand-heart" class="w-4 h-4"></i> Sponsor a Child
+                    </a>
+                    <a href="#contact" class="inline-flex items-center gap-2 border border-cream/35 hover:bg-cream/10 hover:border-cream/60 text-cream font-semibold px-7 py-3.5 rounded-full transition">
+                        Get in touch
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-forest text-cream/85">
+        <div class="max-w-6xl mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-12 gap-10">
+
+                <div class="md:col-span-5">
+                    <div class="flex items-center gap-3 mb-5">
+                        <div class="w-11 h-11 rounded-2xl bg-clay flex items-center justify-center">
+                            <i data-lucide="sprout" class="w-5 h-5 text-cream"></i>
+                        </div>
+                        <div>
+                            <p class="font-heading text-lg font-bold text-cream leading-tight">Kikiji National Orphanage Center</p>
+                            <p class="text-[10.5px] uppercase tracking-[0.16em] text-stone/70">Yei, South Sudan</p>
+                        </div>
+                    </div>
+                    <p class="text-[14px] leading-[1.75] text-cream/75 max-w-md mb-6">
+                        An organization formed with an executive committee and a simple purpose: to give neglected children education, protection, and a place where they are known.
+                    </p>
+                    <a href="#sponsor" class="inline-flex items-center gap-2 bg-clay hover:bg-clayDark text-white font-semibold px-5 py-2.5 rounded-full text-[13px] transition shadow-soft">
+                        Sponsor a Child <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                    </a>
+                </div>
+
+                <div class="md:col-span-3">
+                    <p class="font-semibold text-cream text-[14px] mb-4">Explore</p>
+                    <ul class="space-y-3 text-[13.5px]">
+                        <li><a href="#about" class="text-cream/70 hover:text-cream transition">About us</a></li>
+                        <li><a href="#children" class="text-cream/70 hover:text-cream transition">Our children</a></li>
+                        <li><a href="#impact" class="text-cream/70 hover:text-cream transition">Impact</a></li>
+                        <li><a href="#updates" class="text-cream/70 hover:text-cream transition">Updates</a></li>
+                        <li><a href="#sponsor" class="text-cream/70 hover:text-cream transition">Sponsor a child</a></li>
+                        <li><a href="#ways" class="text-cream/70 hover:text-cream transition">Ways to give</a></li>
+                        <li><a href="#visit" class="text-cream/70 hover:text-cream transition">Visit us</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:col-span-4">
+                    <p class="font-semibold text-cream text-[14px] mb-4">Get in touch</p>
+                    <ul class="space-y-3.5 text-[13.5px] text-cream/70">
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-4 h-4 mt-0.5 text-clay flex-shrink-0"></i>
+                            <span>Yei, Central Equatoria State, South Sudan</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="phone" class="w-4 h-4 mt-0.5 text-clay flex-shrink-0"></i>
+                            <a href="tel:+211924916124" class="hover:text-cream transition">0924 916 124</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="mail" class="w-4 h-4 mt-0.5 text-clay flex-shrink-0"></i>
+                            <a href="mailto:kikijiorphanage@gmail.com" class="hover:text-cream transition break-all">kikijiorphanage@gmail.com</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="globe" class="w-4 h-4 mt-0.5 text-clay flex-shrink-0"></i>
+                            <a href="https://kikijiorphanage.org" target="_blank" rel="noopener" class="hover:text-cream transition">kikijiorphanage.org</a>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i data-lucide="youtube" class="w-4 h-4 mt-0.5 text-clay flex-shrink-0"></i>
+                            <a href="https://youtube.com/@kikijiorphanagecenter-sout1973" target="_blank" rel="noopener" class="hover:text-cream transition">Watch our videos</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-cream/10 mt-14 pt-7 flex flex-col md:flex-row justify-between items-center gap-4 text-[12.5px] text-cream/50">
+                <p>&copy; 2026 Kikiji National Orphanage Center. All rights reserved.</p>
+                <p class="flex items-center gap-2">
+                    <i data-lucide="heart" class="w-3.5 h-3.5 text-clay"></i>
+                    Leave no child behind.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        if (window.lucide) { lucide.createIcons(); }
+
+        // Reveal on scroll
+        const reveals = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('on');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+        reveals.forEach(el => revealObserver.observe(el));
+
+        // Mobile menu
+        const menuBtn = document.getElementById('menuBtn');
+        const menuClose = document.getElementById('menuClose');
+        const panel = document.getElementById('mobilePanel');
+        const shade = document.getElementById('menuShade');
+        const navClose = document.querySelectorAll('.nav-close');
+        const toggleBtns = document.querySelectorAll('.dropdown-toggle');
+        const submenus = document.querySelectorAll('.submenu');
+
+        function openPanel() {
+            panel.classList.add('on');
+            shade.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closePanel() {
+            panel.classList.remove('on');
+            shade.classList.add('hidden');
+            document.body.style.overflow = '';
+            submenus.forEach(s => s.classList.remove('on'));
+            toggleBtns.forEach(b => b.classList.remove('on'));
+        }
+        if (menuBtn) menuBtn.addEventListener('click', openPanel);
+        if (menuClose) menuClose.addEventListener('click', closePanel);
+        if (shade) shade.addEventListener('click', closePanel);
+        navClose.forEach(l => l.addEventListener('click', closePanel));
+
+        toggleBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const sub = btn.nextElementSibling;
+                const isOpen = sub.classList.contains('on');
+                submenus.forEach(s => s.classList.remove('on'));
+                toggleBtns.forEach(b => b.classList.remove('on'));
+                if (!isOpen) {
+                    sub.classList.add('on');
+                    btn.classList.add('on');
+                }
+            });
+        });
+
+        // Desktop dropdown
+        const dropdownWraps = document.querySelectorAll('.dropdown-wrapper');
+        dropdownWraps.forEach(wrap => {
+            const btn = wrap.querySelector('button');
+            if (btn) {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    dropdownWraps.forEach(w => { if (w !== wrap) w.classList.remove('open'); });
+                    wrap.classList.toggle('open');
+                });
+            }
+        });
+        document.addEventListener('click', () => {
+            dropdownWraps.forEach(w => w.classList.remove('open'));
+        });
+
+        // Header shadow
+        const header = document.getElementById('siteHeader');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-soft');
+            } else {
+                header.classList.remove('shadow-soft');
+            }
+        }, { passive: true });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    const y = target.getBoundingClientRect().top + window.scrollY - 80;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                    history.pushState(null, null, href);
+                }
+            });
+        });
+
+        // Contact form
+        const form = document.getElementById('contactForm');
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const btn = form.querySelector('button[type="submit"]');
+                const original = btn.innerHTML;
+                btn.innerHTML = '<i data-lucide="check" class="w-4 h-4"></i> Message sent';
+                btn.disabled = true;
+                if (window.lucide) lucide.createIcons();
+                setTimeout(() => {
+                    btn.innerHTML = original;
+                    btn.disabled = false;
+                    form.reset();
+                    if (window.lucide) lucide.createIcons();
+                }, 2400);
+            });
+        }
+    </script>
+</body>
+</html>
