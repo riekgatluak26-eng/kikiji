@@ -56,6 +56,38 @@
         .hero-tint { background: linear-gradient(155deg, rgba(30,54,42,0.94) 0%, rgba(45,71,57,0.85) 45%, rgba(58,90,64,0.75) 100%); }
         .hero-photo { filter: brightness(0.78) saturate(1.05); }
 
+        /* HERO BACKGROUND SLIDER */
+.hero-slider { position: absolute; inset: 0; z-index: 0; }
+.hero-slider .slide {
+    position: absolute; inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: scale(1.06);
+    transition: opacity 1.4s ease-in-out, transform 7s ease-out;
+    filter: brightness(0.72) saturate(1.05);
+}
+.hero-slider .slide.is-active {
+    opacity: 1;
+    transform: scale(1);
+}
+@media (prefers-reduced-motion: reduce) {
+    .hero-slider .slide { transition: opacity 0.6s ease; transform: none; }
+}
+
+/* HERO DOTS */
+.hero-dots button {
+    width: 8px; height: 8px; border-radius: 9999px;
+    background: rgba(242,239,232,0.35);
+    transition: all 0.35s ease;
+    border: none; cursor: pointer; padding: 0;
+}
+.hero-dots button:hover { background: rgba(242,239,232,0.7); }
+.hero-dots button.is-active {
+    width: 26px;
+    background: #D4A574;
+}
+
         .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1); }
         .reveal.on { opacity:1; transform:translateY(0); }
         .reveal.delay-1 { transition-delay: 0.1s; }
@@ -311,9 +343,23 @@
 
     <main>
 
-        <!-- HERO -->
+       <!-- HERO -->
         <section id="top" class="relative min-h-[92vh] flex items-center overflow-hidden">
-            <img src="assets/kiji4.jpg" alt="Children at Kikiji National Orphanage Center in Yei, South Sudan" class="hero-photo absolute inset-0 w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=compress&cs=tinysrgb&w=1920'">
+
+            <!-- BACKGROUND IMAGE SLIDER -->
+            <div class="hero-slider absolute inset-0 w-full h-full" aria-hidden="true">
+                <div class="slide is-active" style="background-image:url('assets/kiki1.jpeg')"></div>
+                <div class="slide" style="background-image:url('assets/kiki2.jpeg')"></div>
+                <div class="slide" style="background-image:url('assets/kiki3.jpeg')"></div>
+                <div class="slide" style="background-image:url('assets/kiki4.jpeg')"></div>
+                <div class="slide" style="background-image:url('assets/kiki5.jpeg')"></div>
+                <div class="slide" style="background-image:url('assets/kiki6.jpeg')"></div>
+                <div class="slide" style="background-image:url('assets/kiki7.jpeg')"></div>
+                <div class="slide" style="background-image:url('assets/kiki8.jpeg')"></div>
+                <div class="slide" style="background-image:url('assets/kiki9.jpeg')"></div>
+                <div class="slide" style="background-image:url('assets/kiki10.jpeg')"></div>
+            </div>
+
             <div class="hero-tint absolute inset-0"></div>
 
             <div class="absolute top-10 right-10 w-40 h-40 border border-fern/20 rounded-full pointer-events-none hidden lg:block"></div>
@@ -332,7 +378,7 @@
                     </h1>
 
                     <p class="text-[15.5px] md:text-[17px] leading-[1.7] text-cream/85 max-w-2xl mb-10">
-                        Kikiji National Orphanage Center (KNOC) is a nonpolitical, nonprofit national charity organization registered with the Government of South Sudan. We provide education, protection, and family-based care to orphans, street children, and vulnerable children across Yei River County and beyond.
+                        We rescue street children and abandoned children, and we provide protection, food, education, and medical care.
                     </p>
 
                     <div class="flex flex-wrap gap-3 mb-14">
@@ -361,6 +407,9 @@
                 </div>
             </div>
 
+            <!-- SLIDER DOTS -->
+            <div class="hero-dots absolute bottom-24 md:bottom-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2"></div>
+
             <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
                 <a href="#about" class="text-cream/60 hover:text-cream transition">
                     <i data-lucide="chevron-down" class="w-6 h-6"></i>
@@ -386,7 +435,7 @@
             </div>
         </section>
 
-        <!-- WHO WE ARE -->
+       <!-- WHO WE ARE -->
         <section id="about" class="py-24 md:py-32 bg-cream relative overflow-hidden">
             <div class="absolute top-32 right-0 w-80 h-80 bg-fern/5 rounded-full blur-3xl pointer-events-none"></div>
 
@@ -405,13 +454,10 @@
                         </h2>
 
                         <p class="text-[15.5px] leading-[1.75] text-forest/80 mb-5">
-                            Kikiji National Orphanage Centre – South Sudan was legally established in <strong class="text-forest">2020</strong> as a nonpolitical, nonprofit national charity organization, registered with the Government of South Sudan in Juba under <strong class="text-forest">Registration Number 3626</strong>. The orphanage is governed and managed by strong voluntary board members and an executive body.
-                        </p>
-                        <p class="text-[15.5px] leading-[1.75] text-forest/80 mb-5">
-                            We are currently based in <strong class="text-forest">Yei River County, Central Equatoria State</strong>. Through individual resource mobilization support, KNOC-SS provides education sponsorship to orphans and other vulnerable children through paying their tuition, scholastic materials, and stationery. We also provide counseling, awareness on child protection through the media, psychosocial support to children through acrobatics training, child protection case management, and child protection training to caretakers.
+                            Kikiji National Orphanage Center (KNOC) is a nonpolitical, nonprofit national charity organization registered with the Government of South Sudan.
                         </p>
                         <p class="text-[15.5px] leading-[1.75] text-forest/80 mb-9">
-                            The orphanage is an <strong class="text-forest">equal opportunity charity organization</strong>; our selection criteria do not discriminate on tribe, gender, and religion. For instance, the current children benefiting from the program are from <strong class="text-forest">15 different tribes</strong> across South Sudan. Our primary focus is on orphans and vulnerable children to ensure that no child suffers or perishes from abuse, neglect or deprivation and that every child grows up in a loving center and has access to education.
+                            We provide education, protection, and family-based care to orphans, street children, and vulnerable children across Yei River County and beyond.
                         </p>
 
                         <!-- Four pillars -->
@@ -720,7 +766,7 @@
         <!-- Program rows -->
         <div class="border-t border-stone/50">
 
-            <!-- 01 Education -->
+          <!-- 01 Education -->
             <article class="border-b border-stone/50 py-10 md:py-14 grid md:grid-cols-[120px_1fr] gap-6 md:gap-12 reveal">
                 <div>
                     <p class="font-heading text-[34px] md:text-[44px] font-bold text-clay/50 leading-none mb-4">01</p>
@@ -730,9 +776,27 @@
                 </div>
                 <div>
                     <h3 class="font-heading text-2xl md:text-[30px] font-bold text-forest mb-5 tracking-tight">Education</h3>
-                    <p class="text-[15.5px] leading-[1.8] text-forest/80 mb-6 max-w-3xl">
-                        Our intention is to provide education and career opportunities to orphaned, deprived and destitute children. Our immediate support is to keep such children in school and ensure the children continue accessing education like other children until they attain a level where they take the knowledge and skills to stand on their own.
+
+                    <p class="text-[15.5px] leading-[1.8] text-forest/80 mb-7 max-w-3xl">
+                        Every child deserves a classroom, a uniform, and a reason to hope. We keep orphaned, deprived, and destitute children in school — paying their way, walking with them, and staying with them until they can stand on their own.
                     </p>
+
+                    <!-- Impact numbers -->
+                    <div class="grid grid-cols-3 gap-px bg-stone/50 rounded-xl overflow-hidden mb-7 max-w-2xl">
+                        <div class="bg-linen px-4 py-5 text-center">
+                            <p class="font-heading text-2xl md:text-[30px] font-bold text-forest stat-number leading-none mb-1.5">4,023</p>
+                            <p class="text-[10.5px] uppercase tracking-[0.14em] text-sage font-medium leading-tight">Children identified</p>
+                        </div>
+                        <div class="bg-linen px-4 py-5 text-center">
+                            <p class="font-heading text-2xl md:text-[30px] font-bold text-clay stat-number leading-none mb-1.5">118</p>
+                            <p class="text-[10.5px] uppercase tracking-[0.14em] text-sage font-medium leading-tight">Currently in our care</p>
+                        </div>
+                        <div class="bg-linen px-4 py-5 text-center">
+                            <p class="font-heading text-2xl md:text-[30px] font-bold text-forest stat-number leading-none mb-1.5">50<span class="text-stone/70 mx-1">·</span>68</p>
+                            <p class="text-[10.5px] uppercase tracking-[0.14em] text-sage font-medium leading-tight">Boys · Girls</p>
+                        </div>
+                    </div>
+
                     <ul class="space-y-3.5 max-w-3xl">
                         <li class="flex items-start gap-3">
                             <span class="w-1.5 h-1.5 rounded-full bg-clay mt-2.5 flex-shrink-0"></span>
@@ -756,9 +820,23 @@
                 </div>
                 <div>
                     <h3 class="font-heading text-2xl md:text-[30px] font-bold text-forest mb-5 tracking-tight">Psychosocial Support</h3>
-                    <p class="text-[15.5px] leading-[1.8] text-forest/80 mb-6 max-w-3xl">
-                        Trauma healing, counseling, feeding program and family link/rehabilitation.
+
+                    <p class="text-[15.5px] leading-[1.8] text-forest/80 mb-7 max-w-3xl">
+                        Healing comes before learning. We walk with children through trauma, grief, and fear — offering counseling, mentorship, and safe spaces where they can simply be children again.
                     </p>
+
+                    <!-- Impact numbers -->
+                    <div class="grid grid-cols-2 gap-px bg-stone/50 rounded-xl overflow-hidden mb-7 max-w-xl">
+                        <div class="bg-linen px-4 py-5 text-center">
+                            <p class="font-heading text-2xl md:text-[30px] font-bold text-clay stat-number leading-none mb-1.5">1,500+</p>
+                            <p class="text-[10.5px] uppercase tracking-[0.14em] text-sage font-medium leading-tight">Children reached</p>
+                        </div>
+                        <div class="bg-linen px-4 py-5 text-center">
+                            <p class="font-heading text-2xl md:text-[30px] font-bold text-forest stat-number leading-none mb-1.5">CFS</p>
+                            <p class="text-[10.5px] uppercase tracking-[0.14em] text-sage font-medium leading-tight">Child-Friendly Spaces</p>
+                        </div>
+                    </div>
+
                     <ul class="space-y-3.5 max-w-3xl">
                         <li class="flex items-start gap-3">
                             <span class="w-1.5 h-1.5 rounded-full bg-clay mt-2.5 flex-shrink-0"></span>
@@ -782,9 +860,23 @@
                 </div>
                 <div>
                     <h3 class="font-heading text-2xl md:text-[30px] font-bold text-forest mb-5 tracking-tight">Advocacy</h3>
-                    <p class="text-[15.5px] leading-[1.8] text-forest/80 mb-6 max-w-3xl">
-                        KNOC believes that <em class="text-forest not-italic font-medium">'No child should grow up alone'</em>. Our advocacy work is designed to change policy and practice to improve national child and family welfare systems in South Sudan. Awareness is carried through radio stations, open markets, newspapers, and social media, making policies that protect children and organizing seminars and conferences to train parents and caretakers on child protection.
+
+                    <p class="text-[15.5px] leading-[1.8] text-forest/80 mb-7 max-w-3xl">
+                        KNOC believes that <em class="text-forest not-italic font-medium">'No child should grow up alone'</em>. We take that message into radio stations, open markets, newspapers, and social media — changing policy, training caretakers, and reaching families far beyond our gates.
                     </p>
+
+                    <!-- Impact numbers -->
+                    <div class="grid grid-cols-2 gap-px bg-stone/50 rounded-xl overflow-hidden mb-7 max-w-xl">
+                        <div class="bg-linen px-4 py-5 text-center">
+                            <p class="font-heading text-2xl md:text-[30px] font-bold text-clay stat-number leading-none mb-1.5">50,000+</p>
+                            <p class="text-[10.5px] uppercase tracking-[0.14em] text-sage font-medium leading-tight">People reached</p>
+                        </div>
+                        <div class="bg-linen px-4 py-5 text-center">
+                            <p class="font-heading text-2xl md:text-[30px] font-bold text-forest stat-number leading-none mb-1.5">5</p>
+                            <p class="text-[10.5px] uppercase tracking-[0.14em] text-sage font-medium leading-tight">Focus areas</p>
+                        </div>
+                    </div>
+
                     <div class="max-w-3xl">
                         <p class="text-[11.5px] uppercase tracking-[0.18em] text-sage font-semibold mb-4">Five focus areas</p>
                         <div class="flex flex-wrap gap-x-6 gap-y-3">
@@ -896,30 +988,30 @@
                 <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div class="bg-cream/5 backdrop-blur-sm border border-cream/10 rounded-2xl p-7 reveal hover:bg-cream/8 transition-colors">
                         <i data-lucide="users" class="w-8 h-8 text-gold mb-5"></i>
-                        <p class="font-heading text-4xl font-bold text-cream mb-2 stat-number">263</p>
+                        <p class="font-heading text-4xl font-bold text-cream mb-2 stat-number">4,023</p>
                         <p class="text-[13px] uppercase tracking-wider text-cream/60">Orphans identified</p>
-                        <p class="text-[13px] text-cream/70 mt-3 leading-relaxed">112 male and 151 female orphans identified across South Sudan.</p>
+                        <p class="text-[13px] text-cream/70 mt-3 leading-relaxed">Children identified across South Sudan since 2020.</p>
                     </div>
 
                     <div class="bg-cream/5 backdrop-blur-sm border border-cream/10 rounded-2xl p-7 reveal delay-1 hover:bg-cream/8 transition-colors">
                         <i data-lucide="graduation-cap" class="w-8 h-8 text-gold mb-5"></i>
-                        <p class="font-heading text-4xl font-bold text-cream mb-2 stat-number">70</p>
+                        <p class="font-heading text-4xl font-bold text-cream mb-2 stat-number">118</p>
                         <p class="text-[13px] uppercase tracking-wider text-cream/60">Currently supported</p>
-                        <p class="text-[13px] text-cream/70 mt-3 leading-relaxed">31 male and 39 female orphans currently in class and receiving support.</p>
+                        <p class="text-[13px] text-cream/70 mt-3 leading-relaxed">50 boys and 68 girls currently in class and receiving care.</p>
                     </div>
 
                     <div class="bg-cream/5 backdrop-blur-sm border border-cream/10 rounded-2xl p-7 reveal delay-2 hover:bg-cream/8 transition-colors">
-                        <i data-lucide="home" class="w-8 h-8 text-gold mb-5"></i>
-                        <p class="font-heading text-4xl font-bold text-cream mb-2 stat-number">200M</p>
-                        <p class="text-[13px] uppercase tracking-wider text-cream/60">Land acquired</p>
-                        <p class="text-[13px] text-cream/70 mt-3 leading-relaxed">200M × 200M square land acquired in 2023 for an orphanage school facility.</p>
+                        <i data-lucide="map" class="w-8 h-8 text-gold mb-5"></i>
+                        <p class="font-heading text-4xl font-bold text-cream mb-2 stat-number">200×300<span class="text-gold">M</span></p>
+                        <p class="text-[13px] uppercase tracking-wider text-cream/60">Land in Juba</p>
+                        <p class="text-[13px] text-cream/70 mt-3 leading-relaxed">A 200M × 300M plot acquired in Juba for the rehabilitation centre.</p>
                     </div>
 
                     <div class="bg-cream/5 backdrop-blur-sm border border-cream/10 rounded-2xl p-7 reveal delay-3 hover:bg-cream/8 transition-colors">
-                        <i data-lucide="shield-check" class="w-8 h-8 text-gold mb-5"></i>
-                        <p class="font-heading text-4xl font-bold text-cream mb-2 stat-number">15</p>
-                        <p class="text-[13px] uppercase tracking-wider text-cream/60">Tribes represented</p>
-                        <p class="text-[13px] text-cream/70 mt-3 leading-relaxed">Children from 15 different tribes across South Sudan — no discrimination.</p>
+                        <i data-lucide="home" class="w-8 h-8 text-gold mb-5"></i>
+                        <p class="font-heading text-4xl font-bold text-cream mb-2 stat-number">200M</p>
+                        <p class="text-[13px] uppercase tracking-wider text-cream/60">Land in Yei</p>
+                        <p class="text-[13px] text-cream/70 mt-3 leading-relaxed">200M × 200M acquired in 2023 for our orphanage school facility.</p>
                     </div>
                 </div>
 
@@ -928,6 +1020,228 @@
                         Meet the children <i data-lucide="arrow-right" class="w-4 h-4"></i>
                     </a>
                 </div>
+            </div>
+        </section>
+
+        <!-- CHILDREN'S STORIES -->
+        <section id="stories" class="py-24 md:py-32 bg-cream relative overflow-hidden">
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-fern/5 rounded-full blur-3xl pointer-events-none"></div>
+
+            <div class="max-w-6xl mx-auto px-6 relative">
+
+                <!-- Header -->
+                <div class="max-w-2xl mb-16 reveal">
+                    <span class="tag-pill mb-5">Faces of Hope</span>
+                    <h2 class="font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-forest leading-[1.15] mb-5 tracking-tight">
+                        Every child here has a name, a story, and a dream.
+                    </h2>
+                    <p class="text-[15.5px] leading-[1.75] text-forest/80">
+                        These are some of the children you are helping. Read their stories, and if one of them speaks to you — reach out. A sponsor can change a whole life.
+                    </p>
+                </div>
+
+                <!-- STORY 01 — MAYA -->
+                <article class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center mb-24 reveal">
+                    <div class="lg:col-span-5 image-frame">
+                        <div class="photo-zoom rounded-2xl overflow-hidden shadow-lift">
+                            <img src="assets/daniel2.png" alt="Maya, Head Prefect at Kikiji" class="w-full h-[420px] md:h-[520px] object-cover" onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'">
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7">
+                        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 mb-5">
+                            <span class="text-[11px] uppercase tracking-[0.16em] text-clay font-semibold">18 June 2026</span>
+                            <span class="w-1 h-1 rounded-full bg-sage"></span>
+                            <span class="text-[11.5px] uppercase tracking-[0.14em] text-sage font-medium">Leadership</span>
+                        </div>
+                        <h3 class="font-heading text-2xl md:text-[32px] font-bold text-forest leading-tight mb-5 tracking-tight">
+                            Meet Maya — Head Prefect, future doctor.
+                        </h3>
+                        <div class="space-y-4 text-[15px] leading-[1.8] text-forest/80">
+                            <p>
+                                Today she is the <strong class="text-forest font-semibold">Head Prefect (HP)</strong> at her school. Maya loves leadership. It has helped her find her voice, build confidence, and dream big.
+                            </p>
+                            <p>
+                                At Kikiji, since 2021, she has been growing academically, spiritually, and as a leader. Her dream is to become a doctor so she can help others and provide care to those in need.
+                            </p>
+                        </div>
+                        <blockquote class="mt-7 border-l-[3px] border-clay pl-6 py-2">
+                            <p class="font-heading text-[18px] md:text-[19px] italic text-forest leading-[1.6]">
+                                "I want to become a doctor to help other people and provide free medication to orphans."
+                            </p>
+                        </blockquote>
+                        <p class="mt-6 text-[14px] leading-[1.75] text-sage italic">
+                            Friends! Your support and prayers are helping children like Maya pursue the future God has placed before them.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- STORY 02 — ANTHONY ADIDE -->
+                <article class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center mb-24 reveal">
+                    <div class="lg:col-span-7 order-2 lg:order-1">
+                        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 mb-5">
+                            <span class="text-[11px] uppercase tracking-[0.16em] text-clay font-semibold">17 June 2026</span>
+                            <span class="w-1 h-1 rounded-full bg-sage"></span>
+                            <span class="text-[11.5px] uppercase tracking-[0.14em] text-sage font-medium">Seeking a Sponsor</span>
+                        </div>
+                        <h3 class="font-heading text-2xl md:text-[32px] font-bold text-forest leading-tight mb-5 tracking-tight">
+                            Meet Anthony Adide, age 13 — future pilot.
+                        </h3>
+                        <div class="space-y-4 text-[15px] leading-[1.8] text-forest/80">
+                            <p>
+                                Adide told us yesterday: <em class="text-forest not-italic font-medium">"I don't know, without Kikiji, where I could be."</em> And he ends by saying: <strong class="text-forest font-semibold">"Pray for me."</strong>
+                            </p>
+                            <p>
+                                Since joining Kikiji in 2021, he has been progressing both academically and spiritually. He aspires to become a pilot.
+                            </p>
+                        </div>
+
+                        <!-- Sponsor callout -->
+                        <div class="mt-7 bg-linen rounded-2xl p-5 border-l-[3px] border-clay max-w-md">
+                            <p class="text-[11px] uppercase tracking-[0.16em] text-clay font-semibold mb-2">Currently seeking a sponsor</p>
+                            <p class="text-[14px] leading-[1.65] text-forest/85">
+                                Anthony Adide is still waiting for someone to stand with him.
+                            </p>
+                        </div>
+
+                        <div class="mt-7 flex flex-wrap gap-3">
+                            <a href="mailto:kikijiorphanage@gmail.com" class="inline-flex items-center gap-2 bg-forest hover:bg-pine text-cream font-semibold px-6 py-3 rounded-full text-[13.5px] transition shadow-soft">
+                                <i data-lucide="hand-heart" class="w-4 h-4"></i> Sponsor Anthony
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 order-1 lg:order-2 image-frame">
+                        <div class="photo-zoom rounded-2xl overflow-hidden shadow-lift">
+                            <img src="assets/daniel3.png" alt="Anthony Adide, future pilot" class="w-full h-[420px] md:h-[520px] object-cover" onerror="this.src='https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'">
+                        </div>
+                    </div>
+                </article>
+
+                <!-- STORY 03 — DATA CALVIN -->
+                <article class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center mb-24 reveal">
+                    <div class="lg:col-span-5 image-frame">
+                        <div class="photo-zoom rounded-2xl overflow-hidden shadow-lift">
+                            <img src="assets/daniel4.png" alt="Data Calvin, top 10 performer in Yei River County" class="w-full h-[420px] md:h-[520px] object-cover" onerror="this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'">
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7">
+                        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 mb-5">
+                            <span class="text-[11px] uppercase tracking-[0.16em] text-clay font-semibold">Call for Support</span>
+                            <span class="w-1 h-1 rounded-full bg-sage"></span>
+                            <span class="text-[11.5px] uppercase tracking-[0.14em] text-sage font-medium">Top 10 in Yei River County</span>
+                        </div>
+                        <h3 class="font-heading text-2xl md:text-[32px] font-bold text-forest leading-tight mb-5 tracking-tight">
+                            Sponsor Mr. Data Calvin — a top performer, a future pilot.
+                        </h3>
+                        <div class="space-y-4 text-[15px] leading-[1.8] text-forest/80">
+                            <p>
+                                Data is a <strong class="text-forest font-semibold">13-year-old</strong> who joined Kikiji in <strong class="text-forest font-semibold">2020</strong>. Last year, he ranked among the <strong class="text-forest font-semibold">top 10 best performers in Yei River County</strong> in his Primary Leaving Exams.
+                            </p>
+                            <p>
+                                His dream is to become a pilot, and he is currently in <strong class="text-forest font-semibold">Senior One</strong>.
+                            </p>
+                        </div>
+
+                        <!-- Highlight box -->
+                        <div class="mt-7 bg-linen rounded-2xl p-6 border border-stone/40">
+                            <div class="flex items-start gap-4">
+                                <div class="w-11 h-11 rounded-xl bg-cream flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="trophy" class="w-5 h-5 text-clay"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[12px] uppercase tracking-[0.16em] text-clay font-semibold mb-1.5">Achievement</p>
+                                    <p class="text-[14.5px] leading-[1.7] text-forest/85">
+                                        Ranked among the <strong class="text-forest font-semibold">top 10 best performers</strong> in Yei River County — Primary Leaving Exams.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="mt-6 text-[14px] leading-[1.75] text-forest/80">
+                            Every SSP invested in children like Data Calvin is a step toward a stronger South Sudan 🇸🇸. <strong class="text-forest font-semibold">Consider becoming a sponsor.</strong>
+                        </p>
+
+                        <div class="mt-7 flex flex-wrap gap-3">
+                            <a href="mailto:kikijiorphanage@gmail.com" class="inline-flex items-center gap-2 bg-clay hover:bg-clayDark text-white font-semibold px-6 py-3 rounded-full text-[13.5px] transition shadow-soft">
+                                <i data-lucide="mail" class="w-4 h-4"></i> kikijiorphanage@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- STORY 04 — DANIEL -->
+                <article class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center reveal">
+                    <div class="lg:col-span-7 order-2 lg:order-1">
+                        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 mb-5">
+                            <span class="text-[11px] uppercase tracking-[0.16em] text-clay font-semibold">A Morning of Hope</span>
+                            <span class="w-1 h-1 rounded-full bg-sage"></span>
+                            <span class="text-[11.5px] uppercase tracking-[0.14em] text-sage font-medium">Yei, South Sudan 🇸🇸</span>
+                        </div>
+                        <h3 class="font-heading text-2xl md:text-[32px] font-bold text-forest leading-tight mb-5 tracking-tight">
+                            Meet Daniel — a soft smile, a spirit that never gives up.
+                        </h3>
+                        <div class="space-y-4 text-[15px] leading-[1.8] text-forest/80">
+                            <p>
+                                Every morning, as the sun rises over our orphanage centre in Yei, South Sudan, we are reminded of the silent strength in children like Daniel — a bright young boy with a soft smile and a spirit that never gives up.
+                            </p>
+                            <p>
+                                Daniel lost both of his parents at a very young age. For a long time, he knew hunger more than he knew peace. But today, Daniel is one of the many children we care for at Kikiji National Orphanage Center – South Sudan, where love is served with every meal. 🍞🍵
+                            </p>
+                            <p>
+                                In this picture, you see Daniel enjoying his simple porridge. It may seem like a small moment, but for Daniel, it's a symbol of hope — a reminder that he is not forgotten.
+                            </p>
+                        </div>
+
+                        <!-- Progress callout -->
+                        <div class="mt-7 bg-linen rounded-2xl p-6 border border-stone/40">
+                            <div class="flex items-start gap-4">
+                                <div class="w-11 h-11 rounded-xl bg-cream flex items-center justify-center flex-shrink-0">
+                                    <i data-lucide="sunrise" class="w-5 h-5 text-clay"></i>
+                                </div>
+                                <div>
+                                    <p class="text-[12px] uppercase tracking-[0.16em] text-clay font-semibold mb-1.5">Today</p>
+                                    <p class="text-[14.5px] leading-[1.7] text-forest/85">
+                                        Daniel is now in <strong class="text-forest font-semibold">Senior Three</strong> and dreams of becoming an <strong class="text-forest font-semibold">Engineer</strong>.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p class="mt-6 text-[14.5px] leading-[1.75] text-forest/80">
+                            We still have many children just like Daniel who need your help. With rising food costs, school needs, and the daily demands of running the orphanage, we are reaching out for more hands to join us in this mission.
+                        </p>
+
+                        <div class="mt-7 flex flex-wrap gap-3">
+                            <a href="#sponsor" class="inline-flex items-center gap-2 bg-forest hover:bg-pine text-cream font-semibold px-6 py-3 rounded-full text-[13.5px] transition shadow-soft">
+                                <i data-lucide="hand-heart" class="w-4 h-4"></i> Stand with Daniel
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 order-1 lg:order-2 image-frame">
+                        <div class="photo-zoom rounded-2xl overflow-hidden shadow-lift">
+                            <img src="assets/daniel1.jpg" alt="Daniel enjoying his morning porridge" class="w-full h-[420px] md:h-[520px] object-cover" onerror="this.src='https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'">
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Closing CTA -->
+                <div class="text-center mt-24 pt-16 border-t border-stone/50 reveal">
+                    <i data-lucide="heart" class="w-8 h-8 text-clay mx-auto mb-5"></i>
+                    <h3 class="font-heading text-2xl md:text-[30px] font-bold text-forest leading-tight mb-5 tracking-tight max-w-2xl mx-auto">
+                        Your support — no matter how small — can help us provide more meals, more smiles, and more opportunities.
+                    </h3>
+                    <p class="text-[15px] leading-[1.75] text-forest/75 max-w-xl mx-auto mb-8">
+                        🙏 We need kind hearts to stand with us.
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <a href="#sponsor" class="inline-flex items-center gap-2 bg-clay hover:bg-clayDark text-white font-semibold px-7 py-3.5 rounded-full transition shadow-lg hover:shadow-glow">
+                            <i data-lucide="hand-heart" class="w-4 h-4"></i> Sponsor a Child
+                        </a>
+                        <a href="mailto:kikijiorphanage@gmail.com" class="inline-flex items-center gap-2 border border-forest/25 hover:bg-forest/5 text-forest font-semibold px-7 py-3.5 rounded-full transition">
+                            <i data-lucide="mail" class="w-4 h-4"></i> Email us
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -1217,7 +1531,7 @@
             </div>
         </section>
 
-        <!-- GALLERY -->
+      <!-- GALLERY -->
         <section id="gallery" class="py-24 md:py-32 bg-cream">
             <div class="max-w-6xl mx-auto px-6">
                 <div class="max-w-2xl mb-14 reveal">
@@ -1231,38 +1545,111 @@
                 </div>
 
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
+
+                    <!-- EXISTING IMAGES (KEPT AS-IS) -->
                     <div class="gallery-item aspect-square">
-                        <img src="assets/kiji8.png" alt="Children at Kikiji" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=compress&cs=tinysrgb&w=600'">
+                        <img src="assets/kiji8.png" alt="Children at Kikiji" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=compress&cs=tinysrgb&w=600'">
                         <div class="overlay"></div>
                     </div>
                     <div class="gallery-item aspect-square">
-                        <img src="assets/kiji1.jpg" alt="Acrobatics training" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=compress&cs=tinysrgb&w=600'">
+                        <img src="assets/kiji1.jpg" alt="Acrobatics training" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=compress&cs=tinysrgb&w=600'">
                         <div class="overlay"></div>
                     </div>
                     <div class="gallery-item aspect-square">
-                        <img src="assets/kiji2.jpg" alt="Feeding program" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=compress&cs=tinysrgb&w=600'">
+                        <img src="assets/kiji2.jpg" alt="Feeding program" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=compress&cs=tinysrgb&w=600'">
                         <div class="overlay"></div>
                     </div>
                     <div class="gallery-item aspect-square">
-                        <img src="assets/kiji3.jpg" alt="Career guidance" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=compress&cs=tinysrgb&w=600'">
+                        <img src="assets/kiji3.jpg" alt="Career guidance" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=compress&cs=tinysrgb&w=600'">
                         <div class="overlay"></div>
                     </div>
                     <div class="gallery-item aspect-square">
-                        <img src="assets/kiji4.jpg" alt="Charity concert" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=compress&cs=tinysrgb&w=600'">
+                        <img src="assets/kiji4.jpg" alt="Charity concert" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=compress&cs=tinysrgb&w=600'">
                         <div class="overlay"></div>
                     </div>
                     <div class="gallery-item aspect-square">
-                        <img src="assets/kiji5.jpg" alt="Land acquisition" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=compress&cs=tinysrgb&w=600'">
+                        <img src="assets/kiji5.jpg" alt="Land acquisition" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=compress&cs=tinysrgb&w=600'">
                         <div class="overlay"></div>
                     </div>
                     <div class="gallery-item aspect-square">
-                        <img src="assets/kiji6.png" alt="Children with backpacks" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=compress&cs=tinysrgb&w=600'">
+                        <img src="assets/kiji6.png" alt="Children with backpacks" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=compress&cs=tinysrgb&w=600'">
                         <div class="overlay"></div>
                     </div>
                     <div class="gallery-item aspect-square">
-                        <img src="assets/kiji7.jpg" alt="Community outreach" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=compress&cs=tinysrgb&w=600'">
+                        <img src="assets/kiji7.jpg" alt="Community outreach" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=compress&cs=tinysrgb&w=600'">
                         <div class="overlay"></div>
                     </div>
+
+                    <!-- NEW IMAGES: kiki4 → kiki20 -->
+                    <div class="gallery-item aspect-square">
+                        <img src="assets/kiki4.jpg" alt="Children at the Kikiji center" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=compress&cs=tinysrgb&w=600'">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery-item aspect-square">
+                        <img src="assets/kiki5.jpg" alt="Learning session at Kikiji" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=compress&cs=tinysrgb&w=600'">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery-item aspect-square">
+                        <img src="assets/kiki6.jpg" alt="Children sharing a meal" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=compress&cs=tinysrgb&w=600'">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery-item aspect-square">
+                        <img src="assets/kiki7.jpg" alt="Mentorship moment" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=compress&cs=tinysrgb&w=600'">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery-item aspect-square">
+                        <img src="assets/kiki8.jpg" alt="Community gathering" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=compress&cs=tinysrgb&w=600'">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery-item aspect-square">
+                        <img src="assets/kiki9.jpg" alt="Children at play" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=compress&cs=tinysrgb&w=600'">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery-item aspect-square">
+                        <img src="assets/kiki10.jpg" alt="School day at Kikiji" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=compress&cs=tinysrgb&w=600'">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery-item aspect-square">
+                        <img src="assets/kiki11.jpg" alt="Acrobatics practice" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=compress&cs=tinysrgb&w=600'">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery-item aspect-square">
+                        <img src="assets/kiki12.jpg" alt="Vocational training" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=compress&cs=tinysrgb&w=600'">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery-item aspect-square">
+                        <img src="assets/kiki13.jpg" alt="Sunday gathering" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=compress&cs=tinysrgb&w=600'">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery-item aspect-square">
+                        <img src="assets/kiki14.jpg" alt="Health check-up day" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=compress&cs=tinysrgb&w=600'">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery-item aspect-square">
+                        <img src="assets/kiki15.jpg" alt="Uniform distribution day" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1503919545889-aef636e10ad4?auto=compress&cs=tinysrgb&w=600'">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery-item aspect-square">
+                        <img src="assets/kiki16.jpg" alt="Family visit day" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=compress&cs=tinysrgb&w=600'">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery-item aspect-square">
+                        <img src="assets/kiki17.jpg" alt="Career day at the center" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=compress&cs=tinysrgb&w=600'">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery-item aspect-square">
+                        <img src="assets/kiki18.jpg" alt="Community awareness campaign" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1544027993-37dbfe43562a?auto=compress&cs=tinysrgb&w=600'">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery-item aspect-square">
+                        <img src="assets/kiki19.jpg" alt="Children receiving gifts" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=compress&cs=tinysrgb&w=600'">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="gallery-item aspect-square">
+                        <img src="assets/kiki20.jpg" alt="Team photo with staff and volunteers" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=compress&cs=tinysrgb&w=600'">
+                        <div class="overlay"></div>
+                    </div>
+
                 </div>
 
                 <div class="text-center mt-10 reveal">
@@ -1614,35 +2001,6 @@
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-7 reveal">
-                    <!-- Eden Commercial Bank -->
-                    <div class="bank-card rounded-2xl p-8 text-cream shadow-lift">
-                        <div class="flex items-center gap-3 mb-6">
-                            <div class="w-10 h-10 rounded-xl bg-cream/10 flex items-center justify-center">
-                                <i data-lucide="landmark" class="w-5 h-5 text-gold"></i>
-                            </div>
-                            <div>
-                                <p class="text-[11px] uppercase tracking-[0.15em] text-cream/60">Bank Name</p>
-                                <p class="font-heading text-lg font-bold text-cream">Eden Commercial Bank</p>
-                            </div>
-                        </div>
-                        <div class="space-y-4">
-                            <div>
-                                <p class="text-[11px] uppercase tracking-[0.15em] text-cream/50 mb-1">Account Name</p>
-                                <p class="text-[15px] font-medium">Kikiji National Orphanage</p>
-                            </div>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <p class="text-[11px] uppercase tracking-[0.15em] text-cream/50 mb-1">SSP Account</p>
-                                    <p class="acct text-[15px] font-medium text-gold">0202103364719</p>
-                                </div>
-                                <div>
-                                    <p class="text-[11px] uppercase tracking-[0.15em] text-cream/50 mb-1">USD Account</p>
-                                    <p class="acct text-[15px] font-medium text-gold">0202203364720</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
 
                     <!-- KCB -->
                     <div class="bank-card rounded-2xl p-8 text-cream shadow-lift">
@@ -2150,6 +2508,52 @@
                 }, 2400);
             });
         }
+
+        // Hero background slider
+(function () {
+    const slides = document.querySelectorAll('.hero-slider .slide');
+    const dotsWrap = document.querySelector('.hero-dots');
+    if (!slides.length || !dotsWrap) return;
+
+    let current = 0;
+    const DURATION = 6000; // 6 seconds per slide
+    let timer;
+
+    // Build dots
+    slides.forEach((_, i) => {
+        const b = document.createElement('button');
+        b.type = 'button';
+        b.setAttribute('aria-label', `Go to slide ${i + 1}`);
+        if (i === 0) b.classList.add('is-active');
+        b.addEventListener('click', () => goTo(i));
+        dotsWrap.appendChild(b);
+    });
+    const dots = dotsWrap.querySelectorAll('button');
+
+    function goTo(index) {
+        slides[current].classList.remove('is-active');
+        dots[current].classList.remove('is-active');
+        current = (index + slides.length) % slides.length;
+        slides[current].classList.add('is-active');
+        dots[current].classList.add('is-active');
+        restart();
+    }
+
+    function next() { goTo(current + 1); }
+
+    function restart() {
+        clearInterval(timer);
+        timer = setInterval(next, DURATION);
+    }
+
+    // Pause when tab not visible (saves battery)
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) clearInterval(timer);
+        else restart();
+    });
+
+    restart();
+})();
     </script>
 </body>
 </html>
