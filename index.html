@@ -53,39 +53,90 @@
         html { scroll-behavior: smooth; }
         body { font-family:'Inter',sans-serif; background-color:#FBF9F4; color:#33443B; -webkit-font-smoothing: antialiased; }
 
-        .hero-tint { background: linear-gradient(155deg, rgba(30,54,42,0.94) 0%, rgba(45,71,57,0.85) 45%, rgba(58,90,64,0.75) 100%); }
-        .hero-photo { filter: brightness(0.78) saturate(1.05); }
+        /* ============================================
+   HERO — BACKGROUND SLIDER, TINT & DOTS
+   ============================================ */
 
-        /* HERO BACKGROUND SLIDER */
-.hero-slider { position: absolute; inset: 0; z-index: 0; }
+/* Slider wrapper */
+.hero-slider {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+/* Each slide */
 .hero-slider .slide {
-    position: absolute; inset: 0;
+    position: absolute;
+    inset: 0;
     background-size: cover;
     background-position: center;
     opacity: 0;
     transform: scale(1.06);
     transition: opacity 1.4s ease-in-out, transform 7s ease-out;
-    filter: brightness(0.72) saturate(1.05);
+    /* Bright, natural, true-to-life colors */
+    filter: brightness(1.06) saturate(1.15) contrast(1.04);
+    will-change: opacity, transform;
 }
+
 .hero-slider .slide.is-active {
     opacity: 1;
     transform: scale(1);
 }
-@media (prefers-reduced-motion: reduce) {
-    .hero-slider .slide { transition: opacity 0.6s ease; transform: none; }
+
+/* Tint — light enough to see the photo, strong enough for text.
+   Uses a diagonal green wash + a soft left-side scrim for readability. */
+.hero-tint {
+    background:
+        linear-gradient(
+            155deg,
+            rgba(30, 54, 42, 0.62) 0%,
+            rgba(45, 71, 57, 0.42) 45%,
+            rgba(30, 54, 42, 0.55) 100%
+        ),
+        linear-gradient(
+            90deg,
+            rgba(12, 26, 18, 0.45) 0%,
+            rgba(12, 26, 18, 0.15) 45%,
+            rgba(12, 26, 18, 0.00) 100%
+        );
 }
 
-/* HERO DOTS */
-.hero-dots button {
-    width: 8px; height: 8px; border-radius: 9999px;
-    background: rgba(242,239,232,0.35);
-    transition: all 0.35s ease;
-    border: none; cursor: pointer; padding: 0;
+/* Text clarity boost (only where it's needed) */
+.hero-copy h1,
+.hero-copy p,
+.hero-copy .inline-flex span,
+.hero-copy .stat-number {
+    text-shadow:
+        0 2px 20px rgba(10, 25, 18, 0.55),
+        0 1px 3px rgba(10, 25, 18, 0.45);
 }
-.hero-dots button:hover { background: rgba(242,239,232,0.7); }
+
+/* Slider dot indicators */
+.hero-dots button {
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background: rgba(242, 239, 232, 0.45);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: width 0.35s ease, background 0.35s ease;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+.hero-dots button:hover {
+    background: rgba(242, 239, 232, 0.85);
+}
 .hero-dots button.is-active {
     width: 26px;
     background: #D4A574;
+}
+
+/* Accessibility: reduce motion */
+@media (prefers-reduced-motion: reduce) {
+    .hero-slider .slide {
+        transition: opacity 0.6s ease;
+        transform: none;
+    }
 }
 
         .reveal { opacity:0; transform:translateY(30px); transition:opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1); }
@@ -343,16 +394,16 @@
 
     <main>
 
-       <!-- HERO -->
+     <!-- HERO -->
         <section id="top" class="relative min-h-[92vh] flex items-center overflow-hidden">
 
             <!-- BACKGROUND IMAGE SLIDER -->
             <div class="hero-slider absolute inset-0 w-full h-full" aria-hidden="true">
-                <div class="slide is-active" style="background-image:url('assets/kiki1.jpeg')"></div>
+                <div class="slide is-active" style="background-image:url('assets/kiki1.jpg')"></div>
                 <div class="slide" style="background-image:url('assets/kiki4.jpg')"></div>
                 <div class="slide" style="background-image:url('assets/kiki5.jpg')"></div>
                 <div class="slide" style="background-image:url('assets/kiki6.jpg')"></div>
-                <div class="slide" style="background-image:url('assets/kik12.jpg')"></div>
+                <div class="slide" style="background-image:url('assets/kiki12.jpg')"></div>
                 <div class="slide" style="background-image:url('assets/kiki13.jpg')"></div>
                 <div class="slide" style="background-image:url('assets/kiki7.jpg')"></div>
                 <div class="slide" style="background-image:url('assets/kiki8.jpg')"></div>
@@ -366,10 +417,10 @@
             <div class="absolute bottom-16 left-8 w-24 h-24 border border-clay/25 rounded-full pointer-events-none hidden lg:block"></div>
 
             <div class="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full">
-                <div class="max-w-3xl text-cream">
-                    <div class="inline-flex items-center gap-2.5 bg-cream/8 backdrop-blur-sm border border-cream/15 rounded-full px-4 py-1.5 mb-7">
+                <div class="max-w-3xl text-cream hero-copy">
+                    <div class="inline-flex items-center gap-2.5 bg-cream/10 backdrop-blur-md border border-cream/20 rounded-full px-4 py-1.5 mb-7">
                         <span class="pulse-dot w-2 h-2 bg-fern rounded-full"></span>
-                        <span class="text-[12px] tracking-wider uppercase text-cream/90 font-medium">Registered in 2020 · Reg. No. 3626 · Yei, South Sudan</span>
+                        <span class="text-[12px] tracking-wider uppercase text-cream font-medium">Registered in 2020 · Reg. No. 3626 · Yei, South Sudan</span>
                     </div>
 
                     <h1 class="font-heading text-[2.4rem] sm:text-5xl md:text-6xl lg:text-[4.2rem] font-bold leading-[1.05] mb-7 tracking-tight">
@@ -377,7 +428,7 @@
                         behind.
                     </h1>
 
-                    <p class="text-[15.5px] md:text-[17px] leading-[1.7] text-cream/85 max-w-2xl mb-10">
+                    <p class="text-[15.5px] md:text-[17px] leading-[1.7] text-cream max-w-2xl mb-10">
                         We rescue street children and abandoned children, and we provide protection, food, education, and medical care.
                     </p>
 
@@ -385,23 +436,23 @@
                         <a href="#sponsor" class="btn-primary inline-flex items-center gap-2 bg-clay hover:bg-clayDark text-white font-semibold px-7 py-3.5 rounded-full transition shadow-lg hover:shadow-glow">
                             Sponsor a Child <i data-lucide="arrow-right" class="w-4 h-4"></i>
                         </a>
-                        <a href="#about" class="inline-flex items-center gap-2 border border-cream/35 hover:bg-cream/10 hover:border-cream/60 text-cream font-semibold px-7 py-3.5 rounded-full transition">
+                        <a href="#about" class="inline-flex items-center gap-2 border border-cream/45 hover:bg-cream/15 hover:border-cream/70 text-cream font-semibold px-7 py-3.5 rounded-full transition backdrop-blur-sm">
                             Learn About Us
                         </a>
                     </div>
 
-                    <div class="grid grid-cols-3 gap-6 max-w-lg pt-8 border-t border-cream/15">
+                    <div class="grid grid-cols-3 gap-6 max-w-lg pt-8 border-t border-cream/25">
                         <div>
                             <p class="font-heading text-2xl md:text-3xl font-bold text-gold stat-number">2020</p>
-                            <p class="text-[11px] uppercase tracking-wider text-cream/60 mt-1">Founded</p>
+                            <p class="text-[11px] uppercase tracking-wider text-cream/80 mt-1">Founded</p>
                         </div>
                         <div>
-                            <p class="font-heading text-2xl md:text-3xl font-bold text-gold stat-number">263</p>
-                            <p class="text-[11px] uppercase tracking-wider text-cream/60 mt-1">Children identified</p>
+                            <p class="font-heading text-2xl md:text-3xl font-bold text-gold stat-number">4,023</p>
+                            <p class="text-[11px] uppercase tracking-wider text-cream/80 mt-1">Children identified</p>
                         </div>
                         <div>
                             <p class="font-heading text-2xl md:text-3xl font-bold text-gold stat-number">100%</p>
-                            <p class="text-[11px] uppercase tracking-wider text-cream/60 mt-1">To the children</p>
+                            <p class="text-[11px] uppercase tracking-wider text-cream/80 mt-1">To the children</p>
                         </div>
                     </div>
                 </div>
@@ -1568,7 +1619,7 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="gallery-item aspect-square">
-                        <img src="assets/kiji5.jpg" alt="Land acquisition" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=compress&cs=tinysrgb&w=600'">
+                        <img src="assets/kiji5.png" alt="Land acquisition" loading="lazy" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=compress&cs=tinysrgb&w=600'">
                         <div class="overlay"></div>
                     </div>
                     <div class="gallery-item aspect-square">
