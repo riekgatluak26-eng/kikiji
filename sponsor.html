@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Sponsor a Child | Kikiji National Orphanage Center | Yei, South Sudan</title>
+<meta name="description" content="Sponsor a child at Kikiji National Orphanage Center in Yei, South Sudan. Complete the application or download the printable form." />
+<meta name="author" content="Kikiji National Orphanage Center" />
+
+<!-- Enable JS-enhanced visibility ONLY when JS is running -->
+<script>document.documentElement.classList.add('js');</script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          forest: '#2D4739', pine: '#1E362A', moss: '#3A5A40',
+          sage: '#7A8B6F', fern: '#8FAF8F', stone: '#CAD2C5',
+          mist: '#E5EAE0', linen: '#F2EFE8', cream: '#FBF9F4',
+          ink: '#1B2620', clay: '#C08457', clayDark: '#A66D42',
+          gold: '#D4A574', sun: '#E8B84B'
+        },
+        fontFamily: {
+          heading: ['"Fraunces"', 'Georgia', 'serif'],
+          body: ['"Inter"', 'system-ui', 'sans-serif']
+        },
+        boxShadow: {
+          soft: '0 4px 20px -4px rgba(45,71,57,0.12)',
+          lift: '0 20px 40px -12px rgba(45,71,57,0.22)',
+          glow: '0 0 40px -8px rgba(192,132,87,0.35)'
+        }
+      }
+    }
+  };
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',sans-serif;background:#FBF9F4;color:#33443B;-webkit-font-smoothing:antialiased}
+
+  /* ---------- NAV ---------- */
+  .nav-link{position:relative;padding-bottom:2px}
+  .nav-link::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1.5px;background:#C08457;transition:width .35s ease}
+  .nav-link:hover::after,.nav-link.is-current::after{width:100%}
+  .dropdown-content{visibility:hidden;opacity:0;transform:translateY(8px);transition:opacity .25s ease,transform .25s ease,visibility .25s}
+  .group:hover .dropdown-content,.dropdown-wrapper.open .dropdown-content{visibility:visible;opacity:1;transform:translateY(0)}
+  .mobile-panel{transform:translateX(100%);transition:transform .45s cubic-bezier(.4,0,.2,1)}
+  .mobile-panel.on{transform:translateX(0)}
+  .submenu{max-height:0;overflow:hidden;transition:max-height .4s ease}
+  .submenu.on{max-height:400px}
+  .dropdown-toggle i{transition:transform .3s ease}
+  .dropdown-toggle.on i{transform:rotate(180deg)}
+
+  /* ---------- DECOR ---------- */
+  .tag-pill{display:inline-flex;align-items:center;gap:.5rem;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#A66D42;font-weight:600}
+  .tag-pill::before{content:'';display:inline-block;width:24px;height:1px;background:#C08457}
+  .decorative-line{height:1px;background:linear-gradient(90deg,transparent,#CAD2C5,transparent)}
+
+  /* ---------- BUTTONS ---------- */
+  .btn-primary{position:relative;overflow:hidden}
+  .btn-primary::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.18),transparent);transform:translateX(-100%);transition:transform .7s ease}
+  .btn-primary:hover::before{transform:translateX(100%)}
+
+  /* ---------- REVEAL (JS-only, so content is visible without JS) ---------- */
+  html.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+  html.js .reveal.on{opacity:1;transform:translateY(0)}
+  html.js .reveal.delay-1{transition-delay:.08s}
+  html.js .reveal.delay-2{transition-delay:.16s}
+  html.js .reveal.delay-3{transition-delay:.24s}
+
+  /* ---------- HERO ---------- */
+  .hero-tint{background:linear-gradient(155deg,rgba(30,54,42,.80) 0%,rgba(45,71,57,.62) 50%,rgba(30,54,42,.78) 100%),linear-gradient(90deg,rgba(12,26,18,.45) 0%,rgba(12,26,18,.10) 60%,rgba(12,26,18,0) 100%)}
+  .hero-copy h1,.hero-copy p,.hero-copy .inline-flex span{text-shadow:0 2px 20px rgba(10,25,18,.55),0 1px 3px rgba(10,25,18,.45)}
+  .pulse-dot{position:relative}
+  .pulse-dot::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100%;height:100%;border-radius:50%;background:rgba(143,175,143,.4);animation:pulse 2.4s ease-out infinite}
+  @keyframes pulse{0%{transform:translate(-50%,-50%) scale(1);opacity:.7}100%{transform:translate(-50%,-50%) scale(2.4);opacity:0}}
+
+  /* ---------- FORM ---------- */
+  .field{width:100%;padding:.95rem 1.05rem;border-radius:.85rem;border:1.5px solid #CAD2C5;background:#FBF9F4;font-size:15px;color:#1B2620;outline:none;transition:border-color .25s ease,box-shadow .25s ease,background .25s ease}
+  .field::placeholder{color:#9DAE96}
+  .field:hover{border-color:#8FAF8F}
+  .field:focus{border-color:#3A5A40;background:#fff;box-shadow:0 0 0 4px rgba(58,90,64,.12)}
+  .field-label{display:block;font-size:13px;font-weight:600;color:#2D4739;margin-bottom:.5rem}
+  .field-hint{font-size:12px;color:#7A8B6F;margin-top:.5rem;line-height:1.6}
+  .input-error{border-color:#C08457 !important;background:#FFF7F0 !important}
+  .input-error:focus{box-shadow:0 0 0 4px rgba(192,132,87,.15) !important}
+
+  .step-dot{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:9999px;font-size:13px;font-weight:700;background:#F2EFE8;color:#7A8B6F;border:1.5px solid #CAD2C5;transition:all .35s ease;flex-shrink:0}
+  .step-dot.is-active{background:#C08457;color:#fff;border-color:#C08457;box-shadow:0 0 0 5px rgba(192,132,87,.15)}
+  .step-dot.is-done{background:#2D4739;color:#FBF9F4;border-color:#2D4739}
+  .step-rail{flex:1;height:2px;background:#CAD2C5;transition:background .4s ease;border-radius:2px}
+  .step-rail.is-done{background:#2D4739}
+
+  .form-step{display:none}
+  .form-step.on{display:block;animation:fadeIn .4s ease}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+
+  .choice-card{display:block;cursor:pointer;height:100%;position:relative}
+  .choice-inner{display:flex;align-items:center;gap:.85rem;height:100%;border:1.5px solid #CAD2C5;background:#FBF9F4;border-radius:1rem;padding:1rem 1.1rem;transition:all .25s ease}
+  .choice-card:hover .choice-inner{border-color:#8FAF8F;background:#F2EFE8}
+  .choice-card input:checked + .choice-inner{border-color:#C08457;background:#FBF9F4;box-shadow:0 8px 20px -10px rgba(192,132,87,.45)}
+  .choice-card input:checked + .choice-inner .choice-check{opacity:1;transform:scale(1)}
+  .choice-card input:focus-visible + .choice-inner{box-shadow:0 0 0 4px rgba(58,90,64,.14)}
+  .choice-check{opacity:0;transform:scale(.5);transition:all .25s ease;flex-shrink:0}
+
+  .check-row{display:flex;align-items:flex-start;gap:.85rem;cursor:pointer}
+  .check-box{width:22px;height:22px;border-radius:7px;border:1.5px solid #CAD2C5;background:#FBF9F4;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;transition:all .2s ease}
+  .check-row input:checked + .check-box{background:#3A5A40;border-color:#3A5A40}
+  .check-row input:checked + .check-box svg{opacity:1;transform:scale(1)}
+  .check-box svg{opacity:0;transform:scale(.4);transition:all .2s ease}
+
+  .review-row{display:flex;justify-content:space-between;gap:1.5rem;padding:.85rem 0;border-bottom:1px dashed #CAD2C5}
+  .review-row:last-child{border-bottom:none}
+  .review-key{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:#7A8B6F;font-weight:600;flex-shrink:0;padding-top:2px}
+  .review-val{font-size:14.5px;color:#1B2620;text-align:right;font-weight:500;word-break:break-word}
+
+  .faq-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+  .faq-item.open .faq-body{max-height:400px}
+  .faq-item.open .faq-chevron{transform:rotate(180deg)}
+  .faq-chevron{transition:transform .35s ease}
+
+  .success-panel{display:none}
+  .success-panel.on{display:block;animation:fadeIn .5s ease}
+
+  @media (prefers-reduced-motion: reduce){
+    html.js .reveal{opacity:1 !important;transform:none !important}
+    .form-step.on,.success-panel.on{animation:none}
+    .btn-primary::before{display:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= TOP STRIP ================= -->
+<div class="hidden md:block bg-pine text-stone/85 text-[12.5px] border-b border-white/5">
+  <div class="max-w-6xl mx-auto px-6 py-2.5 flex justify-between items-center">
+    <div class="flex items-center gap-7">
+      <a href="tel:+211924916124" class="flex items-center gap-2 hover:text-white transition"><i data-lucide="phone" class="w-3.5 h-3.5"></i> 0924 916 124</a>
+      <span class="w-px h-3 bg-stone/20"></span>
+      <a href="mailto:info@kikijiorphanage.org" class="flex items-center gap-2 hover:text-white transition"><i data-lucide="mail" class="w-3.5 h-3.5"></i> info@kikijiorphanage.org</a>
+    </div>
+    <div class="flex items-center gap-5">
+      <span class="flex items-center gap-2 text-stone/70"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Yei, Central Equatoria State</span>
+      <span class="w-px h-3 bg-stone/20"></span>
+      <a href="https://www.facebook.com/profile.php?id=100068076380201" target="_blank" rel="noopener" class="flex items-center gap-2 hover:text-white transition">Facebook</a>
+      <span class="w-px h-3 bg-stone/20"></span>
+      <a href="https://youtube.com/@kikijiorphanagecenter-sout1973" target="_blank" rel="noopener" class="flex items-center gap-2 hover:text-white transition">Watch</a>
+    </div>
+  </div>
+</div>
+
+<!-- ================= NAV ================= -->
+<header id="siteHeader" class="sticky top-0 z-50 bg-cream/95 backdrop-blur-md border-b border-stone/50 transition-shadow duration-300">
+  <div class="max-w-6xl mx-auto px-5 md:px-6">
+    <div class="flex items-center justify-between h-[70px] md:h-[84px]">
+      <a href="index.html#top" class="flex items-center gap-3 group shrink-0">
+        <div class="w-11 h-11 md:w-12 md:h-12 rounded-full overflow-hidden shadow-soft ring-1 ring-fern/40 group-hover:scale-105 transition-transform bg-cream">
+          <img src="assets/kijilogo.jpg" alt="Kikiji logo" class="w-full h-full object-cover" onerror="this.style.display='none'">
+        </div>
+        <div class="leading-tight">
+          <span class="block font-heading text-[17px] md:text-[19px] font-bold text-forest tracking-tight">Kikiji</span>
+          <span class="block text-[9px] md:text-[10px] uppercase tracking-[0.18em] text-sage font-medium">National Orphanage Center</span>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-7">
+        <a href="index.html#top" class="nav-link text-[13.5px] font-medium text-forest/85 hover:text-forest transition">Home</a>
+        <a href="index.html#about" class="nav-link text-[13.5px] font-medium text-forest/85 hover:text-forest transition">About</a>
+        <a href="index.html#programs" class="nav-link text-[13.5px] font-medium text-forest/85 hover:text-forest transition">Programs</a>
+        <a href="index.html#impact" class="nav-link text-[13.5px] font-medium text-forest/85 hover:text-forest transition">Impact</a>
+        <a href="index.html#children" class="nav-link text-[13.5px] font-medium text-forest/85 hover:text-forest transition">Our Children</a>
+        <a href="index.html#gallery" class="nav-link text-[13.5px] font-medium text-forest/85 hover:text-forest transition">Gallery</a>
+        <div class="group relative dropdown-wrapper">
+          <button class="nav-link is-current flex items-center gap-1 text-[13.5px] font-medium text-forest transition">
+            Get Involved <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+          </button>
+          <div class="dropdown-content absolute left-0 top-full pt-4 w-64 z-40">
+            <div class="bg-cream rounded-xl shadow-lift ring-1 ring-stone/50 overflow-hidden py-1.5">
+              <a href="sponsor.html" class="flex items-center gap-3 px-4 py-2.5 text-[13.5px] font-semibold text-forest bg-linen transition"><i data-lucide="hand-heart" class="w-4 h-4 text-clay"></i> Sponsor a Child</a>
+              <a href="index.html#ways" class="flex items-center gap-3 px-4 py-2.5 text-[13.5px] text-forest/85 hover:bg-linen transition"><i data-lucide="gift" class="w-4 h-4 text-clay"></i> Other Ways to Give</a>
+              <a href="index.html#partner" class="flex items-center gap-3 px-4 py-2.5 text-[13.5px] text-forest/85 hover:bg-linen transition"><i data-lucide="building-2" class="w-4 h-4 text-clay"></i> Partner With Us</a>
+              <a href="index.html#bank" class="flex items-center gap-3 px-4 py-2.5 text-[13.5px] text-forest/85 hover:bg-linen transition"><i data-lucide="landmark" class="w-4 h-4 text-clay"></i> Bank Details</a>
+              <a href="index.html#visit" class="flex items-center gap-3 px-4 py-2.5 text-[13.5px] text-forest/85 hover:bg-linen transition"><i data-lucide="map-pin" class="w-4 h-4 text-clay"></i> Visit the Center</a>
+            </div>
+          </div>
+        </div>
+        <a href="index.html#contact" class="nav-link text-[13.5px] font-medium text-forest/85 hover:text-forest transition">Contact</a>
+      </nav>
+
+      <div class="hidden lg:block">
+        <a href="#apply" class="btn-primary inline-flex items-center gap-2 bg-clay hover:bg-clayDark text-white text-[13px] font-semibold px-5 py-2.5 rounded-full transition shadow-soft hover:shadow-glow">
+          <i data-lucide="hand-heart" class="w-4 h-4"></i> Apply Now
+        </a>
+      </div>
+
+      <button id="menuBtn" class="lg:hidden w-10 h-10 flex items-center justify-center text-forest rounded-lg hover:bg-linen transition" aria-label="Open menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ================= MOBILE MENU ================= -->
+<aside id="mobilePanel" class="mobile-panel fixed top-0 right-0 w-[85%] max-w-sm h-full bg-cream z-50 shadow-2xl overflow-y-auto">
+  <div class="flex items-center justify-between p-5 border-b border-stone/50 sticky top-0 bg-cream z-10">
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-full overflow-hidden ring-1 ring-fern/40 bg-cream">
+        <img src="assets/kijilogo.jpg" alt="Kikiji logo" class="w-full h-full object-cover" onerror="this.style.display='none'">
+      </div>
+      <span class="font-heading font-bold text-forest">Kikiji</span>
+    </div>
+    <button id="menuClose" class="w-9 h-9 flex items-center justify-center text-sage hover:text-forest rounded-lg hover:bg-linen transition" aria-label="Close menu">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <nav class="px-5 py-5 space-y-0.5">
+    <a href="index.html#top" class="block py-3 px-3 rounded-lg text-[15px] font-medium text-forest/85 hover:text-forest hover:bg-linen transition nav-close">Home</a>
+    <a href="index.html#about" class="block py-3 px-3 rounded-lg text-[15px] font-medium text-forest/85 hover:text-forest hover:bg-linen transition nav-close">About</a>
+    <a href="index.html#programs" class="block py-3 px-3 rounded-lg text-[15px] font-medium text-forest/85 hover:text-forest hover:bg-linen transition nav-close">Programs</a>
+    <a href="index.html#impact" class="block py-3 px-3 rounded-lg text-[15px] font-medium text-forest/85 hover:text-forest hover:bg-linen transition nav-close">Impact</a>
+    <a href="index.html#children" class="block py-3 px-3 rounded-lg text-[15px] font-medium text-forest/85 hover:text-forest hover:bg-linen transition nav-close">Our Children</a>
+    <a href="index.html#gallery" class="block py-3 px-3 rounded-lg text-[15px] font-medium text-forest/85 hover:text-forest hover:bg-linen transition nav-close">Gallery</a>
+    <div>
+      <button class="dropdown-toggle flex items-center justify-between w-full py-3 px-3 rounded-lg text-[15px] font-medium text-forest bg-linen transition">
+        Get Involved <i data-lucide="chevron-down" class="w-4 h-4"></i>
+      </button>
+      <div class="submenu pl-3">
+        <a href="sponsor.html" class="block py-2.5 px-3 text-[14px] font-semibold text-forest nav-close">Sponsor a Child</a>
+        <a href="index.html#ways" class="block py-2.5 px-3 text-[14px] text-sage hover:text-forest nav-close">Other Ways to Give</a>
+        <a href="index.html#partner" class="block py-2.5 px-3 text-[14px] text-sage hover:text-forest nav-close">Partner With Us</a>
+        <a href="index.html#bank" class="block py-2.5 px-3 text-[14px] text-sage hover:text-forest nav-close">Bank Details</a>
+        <a href="index.html#visit" class="block py-2.5 px-3 text-[14px] text-sage hover:text-forest nav-close">Visit the Center</a>
+      </div>
+    </div>
+    <a href="index.html#contact" class="block py-3 px-3 rounded-lg text-[15px] font-medium text-forest/85 hover:text-forest hover:bg-linen transition nav-close">Contact</a>
+  </nav>
+  <div class="px-5 pt-3 pb-8 border-t border-stone/50 space-y-3">
+    <a href="tel:+211924916124" class="flex items-center gap-3 text-[14px] text-forest py-2"><i data-lucide="phone" class="w-4 h-4 text-clay"></i> 0924 916 124</a>
+    <a href="mailto:info@kikijiorphanage.org" class="flex items-center gap-3 text-[13px] text-forest break-all py-2"><i data-lucide="mail" class="w-4 h-4 text-clay flex-shrink-0"></i> info@kikijiorphanage.org</a>
+    <a href="#apply" class="nav-close block text-center bg-clay hover:bg-clayDark text-white font-semibold py-3.5 rounded-full transition mt-3 shadow-soft">Start Application</a>
+  </div>
+</aside>
+<div id="menuShade" class="fixed inset-0 bg-ink/50 backdrop-blur-sm z-40 hidden"></div>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section class="relative min-h-[70vh] md:min-h-[76vh] flex items-center overflow-hidden">
+  <img src="assets/kiki4.jpg" alt="" aria-hidden="true"
+       class="absolute inset-0 w-full h-full object-cover"
+       onerror="this.src='https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=compress&cs=tinysrgb&w=1920'">
+  <div class="hero-tint absolute inset-0"></div>
+
+  <div class="absolute top-10 right-10 w-40 h-40 border border-fern/20 rounded-full pointer-events-none hidden lg:block"></div>
+  <div class="absolute bottom-16 left-8 w-24 h-24 border border-clay/25 rounded-full pointer-events-none hidden lg:block"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6 py-20 w-full">
+    <div class="max-w-3xl text-cream hero-copy">
+      <nav class="flex items-center gap-2 text-[12px] text-cream/70 mb-7" aria-label="Breadcrumb">
+        <a href="index.html#top" class="hover:text-cream transition">Home</a>
+        <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+        <span>Get Involved</span>
+        <i data-lucide="chevron-right" class="w-3.5 h-3.5"></i>
+        <span class="text-gold font-medium">Sponsor a Child</span>
+      </nav>
+
+      <div class="inline-flex items-center gap-2.5 bg-cream/10 backdrop-blur-md border border-cream/20 rounded-full px-4 py-1.5 mb-7">
+        <span class="pulse-dot w-2 h-2 bg-fern rounded-full"></span>
+        <span class="text-[12px] tracking-wider uppercase text-cream font-medium">118 children currently in our care</span>
+      </div>
+
+      <h1 class="font-heading text-[2.2rem] sm:text-5xl md:text-[3.4rem] lg:text-[3.8rem] font-bold leading-[1.06] mb-6 tracking-tight">
+        Sponsor a child.<br class="hidden sm:inline">
+        Change a <em class="italic font-normal text-gold">whole</em> life.
+      </h1>
+
+      <p class="text-[16px] md:text-[17px] leading-[1.7] text-cream max-w-2xl mb-10">
+        Complete the short application below — it takes about four minutes. We will match you with a child, share their story, and show you exactly how your support is used.
+      </p>
+
+      <div class="flex flex-wrap gap-3">
+        <a href="#apply" class="btn-primary inline-flex items-center gap-2 bg-clay hover:bg-clayDark text-white font-semibold px-7 py-4 rounded-full transition shadow-lg hover:shadow-glow text-[15px]">
+          Start the application <i data-lucide="arrow-down" class="w-4 h-4"></i>
+        </a>
+        <button type="button" data-download-form class="inline-flex items-center gap-2 bg-cream/95 hover:bg-white text-forest font-semibold px-7 py-4 rounded-full transition shadow-lg text-[15px]">
+          <i data-lucide="download" class="w-4 h-4 text-clay"></i> Download the form
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TRUST STRIP ================= -->
+<section class="bg-linen border-b border-stone/50 py-5">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
+      <span class="flex items-center gap-2.5 text-[13px] tracking-wide text-forest/80"><i data-lucide="shield-check" class="w-4 h-4 text-clay"></i> Registered No. 3626</span>
+      <span class="w-px h-4 bg-stone hidden sm:block"></span>
+      <span class="flex items-center gap-2.5 text-[13px] tracking-wide text-forest/80"><i data-lucide="lock" class="w-4 h-4 text-clay"></i> Your details stay private</span>
+      <span class="w-px h-4 bg-stone hidden sm:block"></span>
+      <span class="flex items-center gap-2.5 text-[13px] tracking-wide text-forest/80"><i data-lucide="receipt" class="w-4 h-4 text-clay"></i> Receipt for every gift</span>
+      <span class="w-px h-4 bg-stone hidden sm:block"></span>
+      <span class="flex items-center gap-2.5 text-[13px] tracking-wide text-forest/80"><i data-lucide="repeat" class="w-4 h-4 text-clay"></i> Cancel anytime</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= APPLICATION ================= -->
+<section id="apply" class="py-20 md:py-28 bg-cream relative overflow-hidden">
+  <div class="absolute top-32 right-0 w-80 h-80 bg-fern/5 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute bottom-0 left-0 w-72 h-72 bg-clay/5 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-6xl mx-auto px-6 relative">
+
+    <div class="max-w-3xl mx-auto text-center mb-12 reveal">
+      <span class="tag-pill mb-5 inline-flex">Sponsorship Application</span>
+      <h2 class="font-heading text-3xl md:text-4xl lg:text-[2.6rem] font-bold text-forest leading-[1.15] mb-5 tracking-tight">
+        Tell us a little about you, and how you would like to help.
+      </h2>
+      <p class="text-[15.5px] leading-[1.75] text-forest/80">
+        There is no wrong way to fill this in. If you would rather print it and send it back, use the download button — the form works on paper too.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+
+      <!-- ============ FORM CARD ============ -->
+      <div class="lg:col-span-8 reveal">
+        <div class="bg-linen rounded-3xl border border-stone/40 shadow-lift overflow-hidden">
+
+          <div class="px-6 md:px-10 pt-8 pb-7 border-b border-stone/50 bg-cream/70">
+            <div class="flex items-center justify-between gap-4 mb-6">
+              <div>
+                <p class="text-[11px] uppercase tracking-[0.22em] text-clay font-bold mb-1.5" id="stepEyebrow">STEP ONE</p>
+                <p class="font-heading text-[22px] md:text-[26px] font-bold text-forest" id="stepTitle">About you</p>
+              </div>
+              <span class="text-[13px] text-sage font-semibold whitespace-nowrap bg-cream px-3.5 py-1.5 rounded-full border border-stone/50" id="stepCounter">1 of 4</span>
+            </div>
+
+            <div class="flex items-center gap-2.5">
+              <span class="step-dot is-active">1</span>
+              <span class="step-rail"></span>
+              <span class="step-dot">2</span>
+              <span class="step-rail"></span>
+              <span class="step-dot">3</span>
+              <span class="step-rail"></span>
+              <span class="step-dot">4</span>
+            </div>
+          </div>
+
+          <form id="sponsorForm" novalidate class="px-6 md:px-10 py-9 md:py-10">
+
+            <!-- STEP 1 -->
+            <div class="form-step on" data-step="0" data-title="About you">
+              <p class="text-[14px] leading-[1.7] text-forest/70 mb-7 pb-6 border-b border-stone/40">Let us know who you are and how we should reach you.</p>
+
+              <div class="space-y-6">
+                <div>
+                  <label class="field-label" for="fullName">Full name <span class="text-clay">*</span></label>
+                  <input id="fullName" name="fullName" type="text" required autocomplete="name" placeholder="e.g. Grace Wani" class="field" />
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label class="field-label" for="email">Email address <span class="text-clay">*</span></label>
+                    <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com" class="field" />
+                  </div>
+                  <div>
+                    <label class="field-label" for="phone">Phone / WhatsApp <span class="text-clay">*</span></label>
+                    <input id="phone" name="phone" type="tel" required autocomplete="tel" placeholder="+211 924 916 124" class="field" />
+                  </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label class="field-label" for="country">Country <span class="text-clay">*</span></label>
+                    <input id="country" name="country" type="text" required autocomplete="country-name" placeholder="e.g. South Sudan" class="field" />
+                  </div>
+                  <div>
+                    <label class="field-label" for="city">City / Town</label>
+                    <input id="city" name="city" type="text" autocomplete="address-level2" placeholder="e.g. Yei" class="field" />
+                  </div>
+                </div>
+
+                <div>
+                  <span class="field-label">How should we reach you? <span class="text-clay">*</span></span>
+                  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <label class="choice-card">
+                      <input type="radio" name="contactMethod" value="Email" class="sr-only" required data-label="Email">
+                      <span class="choice-inner">
+                        <i data-lucide="mail" class="w-4 h-4 text-moss flex-shrink-0"></i>
+                        <span class="text-[14.5px] font-medium text-forest flex-1">Email</span>
+                        <i data-lucide="check-circle-2" class="choice-check w-4 h-4 text-clay"></i>
+                      </span>
+                    </label>
+                    <label class="choice-card">
+                      <input type="radio" name="contactMethod" value="Phone call" class="sr-only" required data-label="Phone call">
+                      <span class="choice-inner">
+                        <i data-lucide="phone" class="w-4 h-4 text-moss flex-shrink-0"></i>
+                        <span class="text-[14.5px] font-medium text-forest flex-1">Phone call</span>
+                        <i data-lucide="check-circle-2" class="choice-check w-4 h-4 text-clay"></i>
+                      </span>
+                    </label>
+                    <label class="choice-card">
+                      <input type="radio" name="contactMethod" value="WhatsApp" class="sr-only" required data-label="WhatsApp">
+                      <span class="choice-inner">
+                        <i data-lucide="message-circle" class="w-4 h-4 text-moss flex-shrink-0"></i>
+                        <span class="text-[14.5px] font-medium text-forest flex-1">WhatsApp</span>
+                        <i data-lucide="check-circle-2" class="choice-check w-4 h-4 text-clay"></i>
+                      </span>
+                    </label>
+                  </div>
+                  <p class="field-hint hidden" data-error-for="contactMethod"><span class="text-clay font-semibold">Please choose how we should reach you.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 2 -->
+            <div class="form-step" data-step="1" data-title="Your sponsorship">
+              <p class="text-[14px] leading-[1.7] text-forest/70 mb-7 pb-6 border-b border-stone/40">Choose the kind of support you would like to give.</p>
+
+              <div class="space-y-8">
+                <div>
+                  <span class="field-label">What kind of sponsorship? <span class="text-clay">*</span></span>
+                  <div class="grid sm:grid-cols-2 gap-3.5">
+                    <label class="choice-card">
+                      <input type="radio" name="sponsorType" value="Sponsor a specific child" class="sr-only" required data-label="A specific child">
+                      <span class="choice-inner">
+                        <span class="w-10 h-10 rounded-xl bg-cream border border-stone/60 flex items-center justify-center flex-shrink-0"><i data-lucide="user-heart" class="w-4 h-4 text-clay"></i></span>
+                        <span class="flex-1">
+                          <span class="block text-[14.5px] font-bold text-forest mb-0.5">A specific child</span>
+                          <span class="block text-[12.5px] leading-snug text-sage">We match you with one child and send their story.</span>
+                        </span>
+                        <i data-lucide="check-circle-2" class="choice-check w-4 h-4 text-clay"></i>
+                      </span>
+                    </label>
+                    <label class="choice-card">
+                      <input type="radio" name="sponsorType" value="Where the need is greatest" class="sr-only" required data-label="Where the need is greatest">
+                      <span class="choice-inner">
+                        <span class="w-10 h-10 rounded-xl bg-cream border border-stone/60 flex items-center justify-center flex-shrink-0"><i data-lucide="sparkles" class="w-4 h-4 text-clay"></i></span>
+                        <span class="flex-1">
+                          <span class="block text-[14.5px] font-bold text-forest mb-0.5">Where the need is greatest</span>
+                          <span class="block text-[12.5px] leading-snug text-sage">Your gift goes to the child who needs it most.</span>
+                        </span>
+                        <i data-lucide="check-circle-2" class="choice-check w-4 h-4 text-clay"></i>
+                      </span>
+                    </label>
+                    <label class="choice-card">
+                      <input type="radio" name="sponsorType" value="Education fund" class="sr-only" required data-label="Education fund">
+                      <span class="choice-inner">
+                        <span class="w-10 h-10 rounded-xl bg-cream border border-stone/60 flex items-center justify-center flex-shrink-0"><i data-lucide="graduation-cap" class="w-4 h-4 text-clay"></i></span>
+                        <span class="flex-1">
+                          <span class="block text-[14.5px] font-bold text-forest mb-0.5">Education fund</span>
+                          <span class="block text-[12.5px] leading-snug text-sage">Fees, uniforms, books and stationery.</span>
+                        </span>
+                        <i data-lucide="check-circle-2" class="choice-check w-4 h-4 text-clay"></i>
+                      </span>
+                    </label>
+                    <label class="choice-card">
+                      <input type="radio" name="sponsorType" value="Food and nutrition" class="sr-only" required data-label="Food & nutrition">
+                      <span class="choice-inner">
+                        <span class="w-10 h-10 rounded-xl bg-cream border border-stone/60 flex items-center justify-center flex-shrink-0"><i data-lucide="utensils" class="w-4 h-4 text-clay"></i></span>
+                        <span class="flex-1">
+                          <span class="block text-[14.5px] font-bold text-forest mb-0.5">Food &amp; nutrition</span>
+                          <span class="block text-[12.5px] leading-snug text-sage">Daily meals so no child learns hungry.</span>
+                        </span>
+                        <i data-lucide="check-circle-2" class="choice-check w-4 h-4 text-clay"></i>
+                      </span>
+                    </label>
+                  </div>
+                  <p class="field-hint hidden" data-error-for="sponsorType"><span class="text-clay font-semibold">Please select a sponsorship type.</span></p>
+                </div>
+
+                <div>
+                  <span class="field-label">How much would you like to give? <span class="text-clay">*</span></span>
+                  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-4">
+                    <label class="choice-card">
+                      <input type="radio" name="amount" value="25" class="sr-only" data-label="$25">
+                      <span class="choice-inner flex-col !items-center !gap-1 text-center !py-4">
+                        <span class="font-heading text-[24px] font-bold text-forest leading-none">$25</span>
+                        <span class="text-[10.5px] uppercase tracking-[0.14em] text-sage">per month</span>
+                      </span>
+                    </label>
+                    <label class="choice-card">
+                      <input type="radio" name="amount" value="50" class="sr-only" data-label="$50">
+                      <span class="choice-inner flex-col !items-center !gap-1 text-center !py-4">
+                        <span class="font-heading text-[24px] font-bold text-forest leading-none">$50</span>
+                        <span class="text-[10.5px] uppercase tracking-[0.14em] text-sage">per month</span>
+                      </span>
+                    </label>
+                    <label class="choice-card">
+                      <input type="radio" name="amount" value="100" class="sr-only" data-label="$100">
+                      <span class="choice-inner flex-col !items-center !gap-1 text-center !py-4">
+                        <span class="font-heading text-[24px] font-bold text-forest leading-none">$100</span>
+                        <span class="text-[10.5px] uppercase tracking-[0.14em] text-sage">per month</span>
+                      </span>
+                    </label>
+                    <label class="choice-card">
+                      <input type="radio" name="amount" value="250" class="sr-only" data-label="$250">
+                      <span class="choice-inner flex-col !items-center !gap-1 text-center !py-4">
+                        <span class="font-heading text-[24px] font-bold text-forest leading-none">$250</span>
+                        <span class="text-[10.5px] uppercase tracking-[0.14em] text-sage">per month</span>
+                      </span>
+                    </label>
+                  </div>
+
+                  <label class="field-label" for="customAmount">Or enter your own amount (USD)</label>
+                  <div class="relative">
+                    <span class="absolute left-4 top-1/2 -translate-y-1/2 text-sage text-[15px] font-semibold">$</span>
+                    <input id="customAmount" name="customAmount" type="number" min="1" step="1" placeholder="Any amount helps" class="field pl-9" />
+                  </div>
+                  <p class="field-hint hidden" data-error-for="amount"><span class="text-clay font-semibold">Please choose an amount, or type your own.</span></p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-5">
+                  <div>
+                    <label class="field-label" for="frequency">Giving frequency <span class="text-clay">*</span></label>
+                    <select id="frequency" name="frequency" required class="field">
+                      <option value="" disabled selected>Choose frequency</option>
+                      <option value="Monthly">Monthly</option>
+                      <option value="Quarterly">Quarterly</option>
+                      <option value="Twice a year">Twice a year</option>
+                      <option value="One-time gift">One-time gift</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label class="field-label" for="startMonth">Preferred start</label>
+                    <input id="startMonth" name="startMonth" type="month" class="field" />
+                  </div>
+                </div>
+
+                <div>
+                  <span class="field-label">Child preference</span>
+                  <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <label class="choice-card">
+                      <input type="radio" name="childPreference" value="Boy" class="sr-only" data-label="A boy">
+                      <span class="choice-inner">
+                        <i data-lucide="user" class="w-4 h-4 text-moss flex-shrink-0"></i>
+                        <span class="text-[14.5px] font-medium text-forest flex-1">A boy</span>
+                        <i data-lucide="check-circle-2" class="choice-check w-4 h-4 text-clay"></i>
+                      </span>
+                    </label>
+                    <label class="choice-card">
+                      <input type="radio" name="childPreference" value="Girl" class="sr-only" data-label="A girl">
+                      <span class="choice-inner">
+                        <i data-lucide="user" class="w-4 h-4 text-moss flex-shrink-0"></i>
+                        <span class="text-[14.5px] font-medium text-forest flex-1">A girl</span>
+                        <i data-lucide="check-circle-2" class="choice-check w-4 h-4 text-clay"></i>
+                      </span>
+                    </label>
+                    <label class="choice-card">
+                      <input type="radio" name="childPreference" value="No preference" class="sr-only" data-label="No preference">
+                      <span class="choice-inner">
+                        <i data-lucide="shuffle" class="w-4 h-4 text-moss flex-shrink-0"></i>
+                        <span class="text-[14.5px] font-medium text-forest flex-1">No preference</span>
+                        <i data-lucide="check-circle-2" class="choice-check w-4 h-4 text-clay"></i>
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 3 -->
+            <div class="form-step" data-step="2" data-title="Payment & consent">
+              <p class="text-[14px] leading-[1.7] text-forest/70 mb-7 pb-6 border-b border-stone/40">How would you prefer to send your support, and your message to the child.</p>
+
+              <div class="space-y-8">
+                <div>
+                  <span class="field-label">Payment preference <span class="text-clay">*</span></span>
+                  <div class="grid sm:grid-cols-2 gap-3.5">
+                    <label class="choice-card">
+                      <input type="radio" name="paymentMethod" value="Bank transfer (KCB)" class="sr-only" required data-label="Bank transfer">
+                      <span class="choice-inner">
+                        <span class="w-10 h-10 rounded-xl bg-cream border border-stone/60 flex items-center justify-center flex-shrink-0"><i data-lucide="landmark" class="w-4 h-4 text-clay"></i></span>
+                        <span class="flex-1">
+                          <span class="block text-[14.5px] font-bold text-forest">Bank transfer</span>
+                          <span class="block text-[12.5px] text-sage mt-0.5">KCB — SSP or USD account</span>
+                        </span>
+                        <i data-lucide="check-circle-2" class="choice-check w-4 h-4 text-clay"></i>
+                      </span>
+                    </label>
+                    <label class="choice-card">
+                      <input type="radio" name="paymentMethod" value="MTN Mobile Money" class="sr-only" required data-label="MTN MoMo">
+                      <span class="choice-inner">
+                        <span class="w-10 h-10 rounded-xl bg-cream border border-stone/60 flex items-center justify-center flex-shrink-0"><i data-lucide="smartphone" class="w-4 h-4 text-clay"></i></span>
+                        <span class="flex-1">
+                          <span class="block text-[14.5px] font-bold text-forest">MTN Mobile Money</span>
+                          <span class="block text-[12.5px] text-sage mt-0.5">+211 922 010 021</span>
+                        </span>
+                        <i data-lucide="check-circle-2" class="choice-check w-4 h-4 text-clay"></i>
+                      </span>
+                    </label>
+                    <label class="choice-card">
+                      <input type="radio" name="paymentMethod" value="Card / online" class="sr-only" required data-label="Card / online">
+                      <span class="choice-inner">
+                        <span class="w-10 h-10 rounded-xl bg-cream border border-stone/60 flex items-center justify-center flex-shrink-0"><i data-lucide="credit-card" class="w-4 h-4 text-clay"></i></span>
+                        <span class="flex-1">
+                          <span class="block text-[14.5px] font-bold text-forest">Card / online</span>
+                          <span class="block text-[12.5px] text-sage mt-0.5">We will send a secure link</span>
+                        </span>
+                        <i data-lucide="check-circle-2" class="choice-check w-4 h-4 text-clay"></i>
+                      </span>
+                    </label>
+                    <label class="choice-card">
+                      <input type="radio" name="paymentMethod" value="Not sure yet" class="sr-only" required data-label="Not sure yet">
+                      <span class="choice-inner">
+                        <span class="w-10 h-10 rounded-xl bg-cream border border-stone/60 flex items-center justify-center flex-shrink-0"><i data-lucide="help-circle" class="w-4 h-4 text-clay"></i></span>
+                        <span class="flex-1">
+                          <span class="block text-[14.5px] font-bold text-forest">Not sure yet</span>
+                          <span class="block text-[12.5px] text-sage mt-0.5">Talk it through with our team</span>
+                        </span>
+                        <i data-lucide="check-circle-2" class="choice-check w-4 h-4 text-clay"></i>
+                      </span>
+                    </label>
+                  </div>
+                  <p class="field-hint hidden" data-error-for="paymentMethod"><span class="text-clay font-semibold">Please choose a payment preference.</span></p>
+                </div>
+
+                <div>
+                  <label class="field-label" for="message">A message for the child <span class="text-sage font-normal">(optional)</span></label>
+                  <textarea id="message" name="message" rows="4" placeholder="Write a few words of encouragement — we will pass them on." class="field resize-none"></textarea>
+                  <p class="field-hint">Short and simple is perfect. Many of our children read English at school level.</p>
+                </div>
+
+                <div class="bg-cream rounded-2xl border border-stone/40 p-5 md:p-6 space-y-5">
+                  <p class="text-[12px] uppercase tracking-[0.18em] text-clay font-bold">Before you submit</p>
+
+                  <label class="check-row">
+                    <input type="checkbox" name="consentContact" class="sr-only" required>
+                    <span class="check-box">
+                      <svg class="w-3.5 h-3.5 text-cream" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                    </span>
+                    <span class="text-[13.5px] leading-[1.7] text-forest/85">I agree that Kikiji National Orphanage Center may contact me about my sponsorship. <span class="text-clay">*</span></span>
+                  </label>
+
+                  <label class="check-row">
+                    <input type="checkbox" name="consentAccurate" class="sr-only" required>
+                    <span class="check-box">
+                      <svg class="w-3.5 h-3.5 text-cream" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+                    </span>
+                    <span class="text-[13.5px] leading-[1.7] text-forest/85">The information I have given is accurate, and I understand this is an expression of interest — not a binding payment. <span class="text-clay">*</span></span>
+                  </label>
+
+                  <p class="field-hint hidden" data-error-for="consent"><span class="text-clay font-semibold">Please tick both boxes to continue.</span></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- STEP 4 -->
+            <div class="form-step" data-step="3" data-title="Review & submit">
+              <p class="text-[14px] leading-[1.7] text-forest/70 mb-7 pb-6 border-b border-stone/40">Please check everything looks right before sending it to us.</p>
+
+              <div class="bg-cream rounded-2xl border border-stone/40 p-6 md:p-7 mb-6">
+                <div class="flex items-center gap-3 mb-5 pb-4 border-b border-stone/40">
+                  <div class="w-10 h-10 rounded-xl bg-linen border border-stone/40 flex items-center justify-center">
+                    <i data-lucide="clipboard-check" class="w-4 h-4 text-clay"></i>
+                  </div>
+                  <div>
+                    <p class="font-heading text-[17px] font-bold text-forest leading-tight">Your application</p>
+                    <p class="text-[12px] text-sage">Double-check before submitting.</p>
+                  </div>
+                </div>
+                <div id="reviewList"></div>
+              </div>
+
+              <div class="bg-linen rounded-2xl border border-stone/40 p-5 md:p-6 flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-cream border border-stone/40 flex items-center justify-center flex-shrink-0">
+                  <i data-lucide="info" class="w-4 h-4 text-clay"></i>
+                </div>
+                <p class="text-[13px] leading-[1.7] text-forest/80 pt-0.5">
+                  When you submit, our team receives your application and replies within <strong class="text-forest font-bold">1–2 working days</strong> with next steps and a child's profile. Nothing is charged automatically.
+                </p>
+              </div>
+            </div>
+
+            <!-- NAV BUTTONS -->
+            <div class="flex flex-wrap items-center justify-between gap-3 mt-9 pt-7 border-t border-stone/50">
+              <button type="button" id="prevBtn" class="hidden items-center gap-2 border-2 border-forest/20 hover:bg-forest/5 hover:border-forest/40 text-forest font-semibold px-6 py-3.5 rounded-full text-[13.5px] transition">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> Back
+              </button>
+              <div class="flex items-center gap-3 ml-auto">
+                <button type="button" id="nextBtn" class="btn-primary inline-flex items-center gap-2 bg-forest hover:bg-pine text-cream font-semibold px-7 py-3.5 rounded-full text-[14px] transition shadow-soft">
+                  Continue <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </button>
+                <button type="submit" id="submitBtn" class="hidden btn-primary items-center gap-2 bg-clay hover:bg-clayDark text-white font-semibold px-7 py-3.5 rounded-full text-[14px] transition shadow-lg hover:shadow-glow">
+                  <i data-lucide="send" class="w-4 h-4"></i> Submit application
+                </button>
+              </div>
+            </div>
+
+          </form>
+
+          <!-- SUCCESS -->
+          <div class="success-panel px-6 md:px-10 py-14 md:py-16 text-center border-t border-stone/50" id="successPanel">
+            <div class="w-16 h-16 rounded-full bg-moss flex items-center justify-center mx-auto mb-6 shadow-lift">
+              <i data-lucide="check" class="w-7 h-7 text-cream"></i>
+            </div>
+            <h3 class="font-heading text-2xl md:text-[30px] font-bold text-forest mb-4 tracking-tight">Thank you — your application is in.</h3>
+            <p class="text-[15px] leading-[1.75] text-forest/80 max-w-lg mx-auto mb-8">
+              Our team will read it carefully and get back to you within 1–2 working days with a child's story and the next steps. If it is urgent, call <a href="tel:+211924916124" class="text-clay font-semibold hover:underline">0924 916 124</a>.
+            </p>
+            <div class="flex flex-wrap justify-center gap-3">
+              <a href="index.html#children" class="inline-flex items-center gap-2 bg-forest hover:bg-pine text-cream font-semibold px-6 py-3.5 rounded-full text-[13.5px] transition shadow-soft">
+                Meet the children <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+              <button type="button" id="resetForm" class="inline-flex items-center gap-2 border-2 border-forest/20 hover:bg-forest/5 text-forest font-semibold px-6 py-3.5 rounded-full text-[13.5px] transition">Submit another</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ============ SIDEBAR ============ -->
+      <div class="lg:col-span-4 space-y-6 reveal delay-1">
+
+        <div class="bg-forest rounded-2xl p-7 text-cream shadow-lift relative overflow-hidden">
+          <div class="absolute inset-0 opacity-[0.06]" style="background-image:radial-gradient(circle,#CAD2C5 1.2px,transparent 1.2px);background-size:26px 26px"></div>
+          <div class="absolute -top-16 -right-16 w-48 h-48 bg-gold/10 rounded-full blur-3xl pointer-events-none"></div>
+          <div class="relative">
+            <div class="flex items-center gap-3 mb-5">
+              <div class="w-11 h-11 rounded-xl bg-cream/10 border border-cream/15 flex items-center justify-center">
+                <i data-lucide="file-text" class="w-5 h-5 text-gold"></i>
+              </div>
+              <div>
+                <p class="font-heading text-[16px] font-bold text-cream leading-tight">Prefer paper?</p>
+                <p class="text-[11.5px] text-cream/60 uppercase tracking-[0.14em]">Printable form</p>
+              </div>
+            </div>
+            <p class="text-[13.5px] leading-[1.7] text-cream/85 mb-6">Download the blank sponsorship application form. Print it, fill it in by hand, and send it back to us — or bring it when you visit.</p>
+            <button type="button" data-download-form class="btn-primary w-full inline-flex items-center justify-center gap-2 bg-clay hover:bg-clayDark text-white font-semibold px-6 py-4 rounded-xl text-[14px] transition shadow-lg hover:shadow-glow">
+              <i data-lucide="download" class="w-4 h-4"></i> Download the form
+            </button>
+            <p class="text-[11.5px] text-cream/60 mt-3 text-center">Opens as a printable document.</p>
+          </div>
+        </div>
+
+        <div class="bg-linen rounded-2xl border border-stone/40 p-7">
+          <div class="flex items-center gap-3 mb-6 pb-5 border-b border-stone/40">
+            <div class="w-10 h-10 rounded-xl bg-cream border border-stone/40 flex items-center justify-center"><i data-lucide="hand-heart" class="w-4 h-4 text-clay"></i></div>
+            <p class="font-heading text-[16px] font-bold text-forest">Your sponsorship</p>
+          </div>
+          <dl class="space-y-4 text-[13.5px]">
+            <div class="flex items-start justify-between gap-4">
+              <dt class="text-[10.5px] uppercase tracking-[0.14em] text-sage font-bold pt-0.5 flex-shrink-0">Name</dt>
+              <dd class="text-forest font-medium text-right" id="sumName">Not provided yet</dd>
+            </div>
+            <div class="flex items-start justify-between gap-4">
+              <dt class="text-[10.5px] uppercase tracking-[0.14em] text-sage font-bold pt-0.5 flex-shrink-0">Type</dt>
+              <dd class="text-forest font-medium text-right" id="sumType">Not selected</dd>
+            </div>
+            <div class="flex items-start justify-between gap-4">
+              <dt class="text-[10.5px] uppercase tracking-[0.14em] text-sage font-bold pt-0.5 flex-shrink-0">Amount</dt>
+              <dd class="font-heading text-[22px] font-bold text-clay leading-none" id="sumAmount">—</dd>
+            </div>
+            <div class="flex items-start justify-between gap-4">
+              <dt class="text-[10.5px] uppercase tracking-[0.14em] text-sage font-bold pt-0.5 flex-shrink-0">Frequency</dt>
+              <dd class="text-forest font-medium text-right" id="sumFreq">Not selected</dd>
+            </div>
+            <div class="flex items-start justify-between gap-4">
+              <dt class="text-[10.5px] uppercase tracking-[0.14em] text-sage font-bold pt-0.5 flex-shrink-0">Child</dt>
+              <dd class="text-forest font-medium text-right" id="sumChild">No preference</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="bg-linen rounded-2xl border border-stone/40 p-7">
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-xl bg-cream border border-stone/40 flex items-center justify-center"><i data-lucide="life-buoy" class="w-4 h-4 text-clay"></i></div>
+            <p class="font-heading text-[16px] font-bold text-forest">Need a hand?</p>
+          </div>
+          <p class="text-[13.5px] leading-[1.7] text-forest/75 mb-5">If anything is unclear, or you would rather apply over the phone, we are happy to help.</p>
+          <div class="space-y-3">
+            <a href="tel:+211924916124" class="flex items-center gap-3 text-[13.5px] text-forest hover:text-clay transition"><i data-lucide="phone" class="w-4 h-4 text-clay flex-shrink-0"></i> 0924 916 124</a>
+            <a href="mailto:kikijiorphanage@gmail.com" class="flex items-center gap-3 text-[13.5px] text-forest hover:text-clay transition break-all"><i data-lucide="mail" class="w-4 h-4 text-clay flex-shrink-0"></i> kikijiorphanage@gmail.com</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHAT IT COVERS ================= -->
+<section class="py-20 md:py-28 bg-linen">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+      <span class="tag-pill mb-5 inline-flex">What It Covers</span>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-forest leading-tight mb-5 tracking-tight">Where every shilling and every dollar goes.</h2>
+      <div class="decorative-line w-24 mx-auto mb-6"></div>
+      <p class="text-[15.5px] leading-relaxed text-forest/75">Sponsorship is not a vague promise. It is school fees, meals, medicine, and someone who notices when a child is struggling.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-cream rounded-2xl p-7 border border-stone/40 reveal">
+        <div class="w-12 h-12 rounded-xl bg-linen flex items-center justify-center mb-6"><i data-lucide="graduation-cap" class="w-5 h-5 text-clay"></i></div>
+        <h3 class="font-heading text-[17px] font-bold text-forest mb-3">School fees &amp; materials</h3>
+        <p class="text-[13.5px] leading-[1.7] text-forest/75">Fees, uniforms, books and stationery for the full school year.</p>
+      </div>
+      <div class="bg-cream rounded-2xl p-7 border border-stone/40 reveal delay-1">
+        <div class="w-12 h-12 rounded-xl bg-linen flex items-center justify-center mb-6"><i data-lucide="utensils" class="w-5 h-5 text-clay"></i></div>
+        <h3 class="font-heading text-[17px] font-bold text-forest mb-3">Daily meals</h3>
+        <p class="text-[13.5px] leading-[1.7] text-forest/75">Nutritious food so a child can learn and grow without hunger.</p>
+      </div>
+      <div class="bg-cream rounded-2xl p-7 border border-stone/40 reveal delay-2">
+        <div class="w-12 h-12 rounded-xl bg-linen flex items-center justify-center mb-6"><i data-lucide="heart-pulse" class="w-5 h-5 text-clay"></i></div>
+        <h3 class="font-heading text-[17px] font-bold text-forest mb-3">Health &amp; care</h3>
+        <p class="text-[13.5px] leading-[1.7] text-forest/75">Medical attention, counselling, mentoring and regular check-ins.</p>
+      </div>
+      <div class="bg-cream rounded-2xl p-7 border border-stone/40 reveal delay-3">
+        <div class="w-12 h-12 rounded-xl bg-linen flex items-center justify-center mb-6"><i data-lucide="home" class="w-5 h-5 text-clay"></i></div>
+        <h3 class="font-heading text-[17px] font-bold text-forest mb-3">A safe home</h3>
+        <p class="text-[13.5px] leading-[1.7] text-forest/75">A stable place to live within our centre or with supported family care.</p>
+      </div>
+    </div>
+
+    <div class="mt-14 max-w-3xl mx-auto text-center reveal">
+      <div class="inline-flex items-start gap-3 px-6 py-5 rounded-2xl bg-cream border border-stone/40 shadow-soft">
+        <i data-lucide="quote" class="w-4 h-4 text-clay mt-1 flex-shrink-0"></i>
+        <p class="font-heading text-[15px] italic text-forest/85 leading-[1.6] text-left">
+          "I want to become a doctor to help other people and provide free medication to orphans."
+          <span class="block not-italic text-[11.5px] uppercase tracking-[0.14em] text-sage mt-2 font-semibold">Maya — Head Prefect</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="py-20 md:py-28 bg-cream">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center mb-12 reveal">
+      <span class="tag-pill mb-5 inline-flex">Questions</span>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold text-forest leading-tight mb-4 tracking-tight">Things people usually ask.</h2>
+      <p class="text-[15px] leading-relaxed text-forest/75">If your question is not here, just ask us directly — we answer every message.</p>
+    </div>
+
+    <div class="space-y-3 reveal" id="faqList">
+      <div class="faq-item bg-linen rounded-2xl border border-stone/40 overflow-hidden">
+        <button type="button" class="faq-toggle w-full flex items-center justify-between gap-5 text-left px-6 py-5">
+          <span class="text-[15px] font-bold text-forest">Do I choose which child I sponsor?</span>
+          <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 text-clay flex-shrink-0"></i>
+        </button>
+        <div class="faq-body">
+          <p class="px-6 pb-6 text-[14px] leading-[1.75] text-forest/75">You can. Select "A specific child" on the form and we will send you profiles of children who are waiting for a sponsor. If you would rather we decide, choose "Where the need is greatest" and we will match you with the child who needs it most right now.</p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-linen rounded-2xl border border-stone/40 overflow-hidden">
+        <button type="button" class="faq-toggle w-full flex items-center justify-between gap-5 text-left px-6 py-5">
+          <span class="text-[15px] font-bold text-forest">Is there a minimum amount?</span>
+          <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 text-clay flex-shrink-0"></i>
+        </button>
+        <div class="faq-body">
+          <p class="px-6 pb-6 text-[14px] leading-[1.75] text-forest/75">No. Our suggested amounts start at $25 a month, but you can enter any amount you are comfortable with. Consistent, smaller support over a long period is often more useful to us than one large gift.</p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-linen rounded-2xl border border-stone/40 overflow-hidden">
+        <button type="button" class="faq-toggle w-full flex items-center justify-between gap-5 text-left px-6 py-5">
+          <span class="text-[15px] font-bold text-forest">Can I stop or change my sponsorship later?</span>
+          <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 text-clay flex-shrink-0"></i>
+        </button>
+        <div class="faq-body">
+          <p class="px-6 pb-6 text-[14px] leading-[1.75] text-forest/75">Yes, at any time. Just tell us by email or phone and we will adjust or end it — no questions asked. We would only ask that you let us know so we can plan for the child's school term.</p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-linen rounded-2xl border border-stone/40 overflow-hidden">
+        <button type="button" class="faq-toggle w-full flex items-center justify-between gap-5 text-left px-6 py-5">
+          <span class="text-[15px] font-bold text-forest">Will I get updates about the child?</span>
+          <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 text-clay flex-shrink-0"></i>
+        </button>
+        <div class="faq-body">
+          <p class="px-6 pb-6 text-[14px] leading-[1.75] text-forest/75">Yes. Sponsors receive periodic updates — school progress, a photo where it is safe and appropriate, and news from the centre. We also publish regular updates on our Facebook page and YouTube channel.</p>
+        </div>
+      </div>
+
+      <div class="faq-item bg-linen rounded-2xl border border-stone/40 overflow-hidden">
+        <button type="button" class="faq-toggle w-full flex items-center justify-between gap-5 text-left px-6 py-5">
+          <span class="text-[15px] font-bold text-forest">Is my payment secure and is it used well?</span>
+          <i data-lucide="chevron-down" class="faq-chevron w-4 h-4 text-clay flex-shrink-0"></i>
+        </button>
+        <div class="faq-body">
+          <p class="px-6 pb-6 text-[14px] leading-[1.75] text-forest/75">We are registered with the Government of South Sudan (Registration No. 3626) and are accountable for every gift. Transfers go directly to our official KCB accounts or MTN MoMo line — details are on our <a href="index.html#bank" class="text-clay font-semibold hover:underline">bank details page</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="relative py-20 md:py-24 overflow-hidden bg-pine">
+  <div class="absolute inset-0 opacity-[0.06]" style="background-image:radial-gradient(circle,#CAD2C5 1.2px,transparent 1.2px);background-size:28px 28px"></div>
+  <div class="max-w-4xl mx-auto px-6 text-center relative reveal">
+    <i data-lucide="heart" class="w-10 h-10 text-clay mx-auto mb-6"></i>
+    <h2 class="font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-cream leading-[1.2] mb-6 tracking-tight">Somewhere in Yei, a child is waiting for someone like you.</h2>
+    <p class="text-[15.5px] leading-[1.75] text-cream/80 max-w-2xl mx-auto mb-10">It takes four minutes to apply. It can change the whole direction of a child's life.</p>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a href="#apply" class="inline-flex items-center gap-2 bg-clay hover:bg-clayDark text-white font-semibold px-7 py-4 rounded-full transition shadow-lg hover:shadow-glow">
+        <i data-lucide="hand-heart" class="w-4 h-4"></i> Start the application
+      </a>
+      <button type="button" data-download-form class="inline-flex items-center gap-2 border-2 border-cream/35 hover:bg-cream/10 hover:border-cream/60 text-cream font-semibold px-7 py-4 rounded-full transition">
+        <i data-lucide="download" class="w-4 h-4"></i> Download the form
+      </button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-forest text-cream/85 relative overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.04] pointer-events-none" style="background-image:radial-gradient(circle,#CAD2C5 1px,transparent 1px);background-size:30px 30px"></div>
+  <div class="absolute -top-24 -right-24 w-96 h-96 bg-clay/8 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-6xl mx-auto px-6 pt-16 md:pt-20 pb-8 relative">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-8 pb-12 mb-12 border-b border-cream/10">
+      <div class="flex items-center gap-4">
+        <div class="w-14 h-14 rounded-full overflow-hidden shadow-soft flex-shrink-0 bg-cream ring-2 ring-cream/25">
+          <img src="assets/kijilogo.jpg" alt="Kikiji logo" class="w-full h-full object-cover" onerror="this.style.display='none'">
+        </div>
+        <div>
+          <p class="font-heading text-xl md:text-2xl font-bold text-cream leading-tight tracking-tight">Kikiji National Orphanage Center</p>
+          <p class="text-[10.5px] uppercase tracking-[0.22em] text-stone/60 mt-1">Yei · Central Equatoria · South Sudan</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="https://www.facebook.com/profile.php?id=100068076380201" target="_blank" rel="noopener" aria-label="Facebook" class="group w-11 h-11 rounded-full bg-cream/5 border border-cream/15 hover:bg-[#1877F2] hover:border-[#1877F2] flex items-center justify-center transition-all duration-300">
+          <svg class="w-5 h-5 text-cream/85 group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="currentColor"><path d="M22 12.06C22 6.5 17.52 2 12 2S2 6.5 2 12.06c0 5.02 3.66 9.18 8.44 9.94v-7.03H7.9v-2.91h2.54V9.85c0-2.52 1.49-3.91 3.78-3.91 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.78-1.63 1.57v1.88h2.78l-.44 2.91h-2.34V22c4.78-.76 8.43-4.92 8.43-9.94Z"/></svg>
+        </a>
+        <a href="https://youtube.com/@kikijiorphanagecenter-sout1973" target="_blank" rel="noopener" aria-label="YouTube" class="group w-11 h-11 rounded-full bg-cream/5 border border-cream/15 hover:bg-[#FF0000] hover:border-[#FF0000] flex items-center justify-center transition-all duration-300">
+          <svg class="w-5 h-5 text-cream/85 group-hover:text-white transition-colors" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.51A3.02 3.02 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3.02 3.02 0 0 0 2.12 2.14C4.5 20.45 12 20.45 12 20.45s7.5 0 9.38-.51a3.02 3.02 0 0 0 2.12-2.14c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8ZM9.55 15.57V8.43L15.82 12l-6.27 3.57Z"/></svg>
+        </a>
+        <a href="mailto:info@kikijiorphanage.org" aria-label="Email" class="group w-11 h-11 rounded-full bg-cream/5 border border-cream/15 hover:bg-clay hover:border-clay flex items-center justify-center transition-all duration-300">
+          <i data-lucide="mail" class="w-5 h-5 text-cream/85 group-hover:text-white transition-colors"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-12 gap-10 mb-12">
+      <div class="md:col-span-5">
+        <p class="text-[14px] leading-[1.8] text-cream/75 max-w-md mb-5">
+          Registered with the Government of South Sudan under <span class="text-cream/90 font-semibold">Registration No. 3626</span>. A nonpolitical, nonprofit national charity organization founded in 2020, pioneering the <span class="text-cream/90 font-semibold">Family-Based Care (FBC)</span> model for orphans and vulnerable children.
+        </p>
+        <div class="flex items-start gap-3 mb-6">
+          <i data-lucide="quote" class="w-4 h-4 text-clay mt-1 flex-shrink-0"></i>
+          <p class="font-heading text-[15px] italic text-cream/85 leading-[1.6]">"Leave NO child behind!"</p>
+        </div>
+        <a href="#apply" class="inline-flex items-center gap-2 bg-clay hover:bg-clayDark text-white font-semibold px-5 py-2.5 rounded-full text-[13px] transition shadow-soft">
+          Sponsor a Child <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+        </a>
+      </div>
+
+      <div class="md:col-span-3">
+        <p class="font-semibold text-cream text-[14px] mb-5 flex items-center gap-2"><span class="w-4 h-px bg-clay"></span> Explore</p>
+        <ul class="space-y-3 text-[13.5px]">
+          <li><a href="index.html#about" class="text-cream/70 hover:text-cream transition">About us</a></li>
+          <li><a href="index.html#programs" class="text-cream/70 hover:text-cream transition">Programs</a></li>
+          <li><a href="index.html#children" class="text-cream/70 hover:text-cream transition">Success stories</a></li>
+          <li><a href="index.html#impact" class="text-cream/70 hover:text-cream transition">Impact</a></li>
+          <li><a href="index.html#gallery" class="text-cream/70 hover:text-cream transition">Gallery</a></li>
+          <li><a href="index.html#updates" class="text-cream/70 hover:text-cream transition">News &amp; updates</a></li>
+          <li><a href="sponsor.html" class="text-cream font-semibold transition">Sponsor a child</a></li>
+          <li><a href="index.html#ways" class="text-cream/70 hover:text-cream transition">Ways to give</a></li>
+          <li><a href="index.html#bank" class="text-cream/70 hover:text-cream transition">Bank details</a></li>
+          <li><a href="index.html#visit" class="text-cream/70 hover:text-cream transition">Visit us</a></li>
+        </ul>
+      </div>
+
+      <div class="md:col-span-4">
+        <p class="font-semibold text-cream text-[14px] mb-5 flex items-center gap-2"><span class="w-4 h-px bg-clay"></span> Get in touch</p>
+        <ul class="space-y-4 text-[13.5px] text-cream/70">
+          <li class="flex items-start gap-3">
+            <i data-lucide="map-pin" class="w-4 h-4 mt-0.5 text-clay flex-shrink-0"></i>
+            <span>Yei, Central Equatoria State, South Sudan<br><span class="text-cream/50 text-[12px]">Head Office: Yei, Malleren KC 400m</span></span>
+          </li>
+          <li class="flex items-start gap-3">
+            <i data-lucide="phone" class="w-4 h-4 mt-0.5 text-clay flex-shrink-0"></i>
+            <div>
+              <a href="tel:+211924916124" class="hover:text-cream transition">0924 916 124</a><br>
+              <a href="tel:+211922010021" class="hover:text-cream transition text-[12.5px]">0922 010 021 (MTN MoMo)</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-3">
+            <i data-lucide="mail" class="w-4 h-4 mt-0.5 text-clay flex-shrink-0"></i>
+            <a href="mailto:info@kikijiorphanage.org" class="hover:text-cream transition break-all">info@kikijiorphanage.org</a>
+          </li>
+          <li class="flex items-start gap-3">
+            <i data-lucide="globe" class="w-4 h-4 mt-0.5 text-clay flex-shrink-0"></i>
+            <a href="https://kikijiorphanage.org" target="_blank" rel="noopener" class="hover:text-cream transition">kikijiorphanage.org</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-cream/10 pt-7 flex flex-col md:flex-row justify-between items-center gap-4 text-[12.5px] text-cream/50">
+      <p>&copy; 2026 Kikiji National Orphanage Center. All rights reserved.</p>
+      <p class="flex items-center gap-2"><i data-lucide="heart" class="w-3.5 h-3.5 text-clay"></i> Leave no child behind.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     PRINTABLE FORM TEMPLATE
+     Kept inside a <template> tag so it is never treated as live
+     HTML by the browser and can never break the main <script>.
+     ============================================================ -->
+<template id="printFormTemplate">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:Georgia,"Times New Roman",serif;color:#1B2620;background:#fff;padding:32px 24px;line-height:1.55}
+    .sheet{max-width:800px;margin:0 auto}
+    .head{display:flex;align-items:center;gap:16px;border-bottom:3px solid #2D4739;padding-bottom:16px;margin-bottom:8px}
+    .mark{width:56px;height:56px;border-radius:50%;background:#2D4739;color:#FBF9F4;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:bold;flex-shrink:0;font-family:Georgia,serif}
+    h1{font-size:20px;color:#2D4739;letter-spacing:-0.01em}
+    .sub{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#7A8B6F;margin-top:4px}
+    .meta{display:flex;justify-content:space-between;font-size:11px;color:#7A8B6F;margin:10px 0 26px;flex-wrap:wrap;gap:8px}
+    h2{font-size:13px;text-transform:uppercase;letter-spacing:.14em;color:#A66D42;margin:26px 0 12px;padding-bottom:6px;border-bottom:1px solid #CAD2C5}
+    .row{display:flex;gap:18px;margin-bottom:14px;flex-wrap:wrap}
+    .f{flex:1;min-width:180px}
+    label{display:block;font-size:10.5px;text-transform:uppercase;letter-spacing:.1em;color:#7A8B6F;margin-bottom:6px;font-family:Arial,Helvetica,sans-serif}
+    .line{border-bottom:1px solid #8FAF8F;height:26px}
+    .box{display:inline-block;width:13px;height:13px;border:1px solid #7A8B6F;margin-right:7px;vertical-align:-2px}
+    .opts{font-family:Arial,Helvetica,sans-serif;font-size:12.5px;color:#33443B}
+    .opt{display:inline-block;margin:0 20px 8px 0}
+    textarea{width:100%;border:1px solid #8FAF8F;min-height:80px;padding:8px}
+    .note{font-family:Arial,Helvetica,sans-serif;font-size:11.5px;color:#7A8B6F;background:#F2EFE8;border-left:3px solid #C08457;padding:12px 14px;margin-top:8px}
+    .sign{display:flex;gap:30px;margin-top:34px}
+    .sign .f{border-top:1px solid #8FAF8F;padding-top:8px}
+    .foot{margin-top:34px;padding-top:14px;border-top:1px solid #CAD2C5;font-family:Arial,Helvetica,sans-serif;font-size:11px;color:#7A8B6F;text-align:center}
+    @media print{body{padding:0}.sheet{max-width:none}}
+  </style>
+
+  <div class="sheet">
+    <div class="head">
+      <div class="mark">K</div>
+      <div>
+        <h1>Kikiji National Orphanage Center</h1>
+        <div class="sub">Child Sponsorship Application Form</div>
+      </div>
+    </div>
+
+    <div class="meta">
+      <span>Yei, Central Equatoria State, South Sudan</span>
+      <span>Registration No. 3626 &middot; Est. 2020</span>
+      <span>0924 916 124 &middot; kikijiorphanage@gmail.com</span>
+    </div>
+
+    <h2>Section A — About you</h2>
+    <div class="row">
+      <div class="f"><label>Full name</label><div class="line"></div></div>
+      <div class="f"><label>Date of birth</label><div class="line"></div></div>
+    </div>
+    <div class="row">
+      <div class="f"><label>Email address</label><div class="line"></div></div>
+      <div class="f"><label>Phone / WhatsApp</label><div class="line"></div></div>
+    </div>
+    <div class="row">
+      <div class="f"><label>City / Town</label><div class="line"></div></div>
+      <div class="f"><label>Country</label><div class="line"></div></div>
+    </div>
+    <div class="row">
+      <div class="f"><label>Occupation</label><div class="line"></div></div>
+      <div class="f"><label>Preferred contact method</label><div class="line"></div></div>
+    </div>
+
+    <h2>Section B — Your sponsorship</h2>
+    <div class="opts">
+      <label>Type of sponsorship</label>
+      <span class="opt"><span class="box"></span>Sponsor a specific child</span>
+      <span class="opt"><span class="box"></span>Where the need is greatest</span>
+      <span class="opt"><span class="box"></span>Education fund</span>
+      <span class="opt"><span class="box"></span>Food &amp; nutrition</span>
+    </div>
+    <div class="row" style="margin-top:6px">
+      <div class="f"><label>Amount (USD)</label><div class="line"></div></div>
+      <div class="f"><label>Frequency</label><div class="line"></div></div>
+    </div>
+    <div class="opts">
+      <label>Child preference</label>
+      <span class="opt"><span class="box"></span>A boy</span>
+      <span class="opt"><span class="box"></span>A girl</span>
+      <span class="opt"><span class="box"></span>No preference</span>
+    </div>
+    <div class="row">
+      <div class="f"><label>Preferred start date</label><div class="line"></div></div>
+      <div class="f"><label>Age range (if any)</label><div class="line"></div></div>
+    </div>
+
+    <h2>Section C — Payment preference</h2>
+    <div class="opts">
+      <span class="opt"><span class="box"></span>Bank transfer — KCB (SSP 5590870038 / USD 5590870046)</span>
+      <span class="opt"><span class="box"></span>MTN Mobile Money — +211 922 010 021</span>
+      <span class="opt"><span class="box"></span>Card / online link</span>
+      <span class="opt"><span class="box"></span>Not sure yet — please advise</span>
+    </div>
+
+    <h2>Section D — Message for the child (optional)</h2>
+    <textarea></textarea>
+
+    <h2>Section E — Declaration</h2>
+    <div class="opts">
+      <div style="margin-bottom:10px"><span class="box"></span>I agree that Kikiji National Orphanage Center may contact me about my sponsorship.</div>
+      <div><span class="box"></span>I confirm the information above is accurate and understand this is an expression of interest, not a binding payment.</div>
+    </div>
+    <div class="sign">
+      <div class="f"><label>Signature</label></div>
+      <div class="f"><label>Date</label></div>
+    </div>
+    <div class="note">
+      Please return this completed form by email to <strong>kikijiorphanage@gmail.com</strong>, by WhatsApp to <strong>+211 924 916 124</strong>, or deliver it to our head office in Yei (Malleren KC 400m). Every application is read by a member of our team, and we reply within 1–2 working days.
+    </div>
+    <div class="foot">Kikiji National Orphanage Center &middot; Leave NO child behind &middot; kikijiorphanage.org</div>
+  </div>
+</template>
+
+<!-- ============================================================
+     MAIN SCRIPT
+     Note: no `</script>` sequence appears anywhere in the strings
+     below. The print form is pulled from <template>, not built
+     from JavaScript string concatenation.
+     ============================================================ -->
+<script>
+(function () {
+  'use strict';
+
+  /* ---------- Lucide icons ---------- */
+  if (window.lucide && typeof window.lucide.createIcons === 'function') {
+    window.lucide.createIcons();
+  }
+
+  /* ---------- Reveal on scroll ---------- */
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && reveals.length) {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('on');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    reveals.forEach(function (el) { revealObserver.observe(el); });
+  } else {
+    // No IntersectionObserver support — just show everything
+    reveals.forEach(function (el) { el.classList.add('on'); });
+  }
+
+  /* ---------- Mobile menu ---------- */
+  var menuBtn = document.getElementById('menuBtn');
+  var menuClose = document.getElementById('menuClose');
+  var panel = document.getElementById('mobilePanel');
+  var shade = document.getElementById('menuShade');
+  var navCloseLinks = document.querySelectorAll('.nav-close');
+  var toggleBtns = document.querySelectorAll('.dropdown-toggle');
+  var submenus = document.querySelectorAll('.submenu');
+
+  function openPanel() {
+    panel.classList.add('on');
+    shade.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+  }
+  function closePanel() {
+    panel.classList.remove('on');
+    shade.classList.add('hidden');
+    document.body.style.overflow = '';
+    submenus.forEach(function (s) { s.classList.remove('on'); });
+    toggleBtns.forEach(function (b) { b.classList.remove('on'); });
+  }
+  if (menuBtn) menuBtn.addEventListener('click', openPanel);
+  if (menuClose) menuClose.addEventListener('click', closePanel);
+  if (shade) shade.addEventListener('click', closePanel);
+  navCloseLinks.forEach(function (l) { l.addEventListener('click', closePanel); });
+
+  toggleBtns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var sub = btn.nextElementSibling;
+      var isOpen = sub && sub.classList.contains('on');
+      submenus.forEach(function (s) { s.classList.remove('on'); });
+      toggleBtns.forEach(function (b) { b.classList.remove('on'); });
+      if (!isOpen && sub) {
+        sub.classList.add('on');
+        btn.classList.add('on');
+      }
+    });
+  });
+
+  /* ---------- Desktop dropdown ---------- */
+  var dropdownWraps = document.querySelectorAll('.dropdown-wrapper');
+  dropdownWraps.forEach(function (wrap) {
+    var btn = wrap.querySelector('button');
+    if (btn) {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        dropdownWraps.forEach(function (w) { if (w !== wrap) w.classList.remove('open'); });
+        wrap.classList.toggle('open');
+      });
+    }
+  });
+  document.addEventListener('click', function () {
+    dropdownWraps.forEach(function (w) { w.classList.remove('open'); });
+  });
+
+  /* ---------- Header shadow on scroll ---------- */
+  var header = document.getElementById('siteHeader');
+  if (header) {
+    window.addEventListener('scroll', function () {
+      if (window.scrollY > 20) header.classList.add('shadow-soft');
+      else header.classList.remove('shadow-soft');
+    }, { passive: true });
+  }
+
+  /* ---------- Smooth scroll for internal anchors ---------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      var href = this.getAttribute('href');
+      if (!href || href === '#') return;
+      var target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        var y = target.getBoundingClientRect().top + window.scrollY - 90;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        history.pushState(null, '', href);
+      }
+    });
+  });
+
+  /* ---------- FAQ accordion ---------- */
+  document.querySelectorAll('.faq-toggle').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function (i) { i.classList.remove('open'); });
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+
+  /* ============================================
+     MULTI-STEP FORM
+     ============================================ */
+  (function initForm() {
+    var form = document.getElementById('sponsorForm');
+    if (!form) return;
+
+    var steps = Array.prototype.slice.call(form.querySelectorAll('.form-step'));
+    var dots = Array.prototype.slice.call(document.querySelectorAll('.step-dot'));
+    var rails = Array.prototype.slice.call(document.querySelectorAll('.step-rail'));
+    var stepCounter = document.getElementById('stepCounter');
+    var stepTitle = document.getElementById('stepTitle');
+    var stepEyebrow = document.getElementById('stepEyebrow');
+    var prevBtn = document.getElementById('prevBtn');
+    var nextBtn = document.getElementById('nextBtn');
+    var submitBtn = document.getElementById('submitBtn');
+    var successPanel = document.getElementById('successPanel');
+    var resetBtn = document.getElementById('resetForm');
+    var reviewList = document.getElementById('reviewList');
+
+    var total = steps.length;
+    var current = 0;
+    var eyebrowWords = ['STEP ONE', 'STEP TWO', 'STEP THREE', 'STEP FOUR'];
+
+    function render() {
+      steps.forEach(function (s, i) { s.classList.toggle('on', i === current); });
+
+      dots.forEach(function (d, i) {
+        d.classList.toggle('is-active', i === current);
+        d.classList.toggle('is-done', i < current);
+        if (i < current) {
+          d.innerHTML = '<svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>';
+        } else {
+          d.textContent = String(i + 1);
+        }
+      });
+
+      rails.forEach(function (r, i) { r.classList.toggle('is-done', i < current); });
+
+      if (stepCounter) stepCounter.textContent = (current + 1) + ' of ' + total;
+      if (stepTitle) stepTitle.textContent = steps[current].dataset.title || '';
+      if (stepEyebrow) stepEyebrow.textContent = eyebrowWords[current] || '';
+
+      if (current === 0) {
+        prevBtn.classList.add('hidden');
+        prevBtn.classList.remove('inline-flex');
+      } else {
+        prevBtn.classList.remove('hidden');
+        prevBtn.classList.add('inline-flex');
+      }
+
+      if (current === total - 1) {
+        nextBtn.classList.add('hidden');
+        nextBtn.classList.remove('inline-flex');
+        submitBtn.classList.remove('hidden');
+        submitBtn.classList.add('inline-flex');
+      } else {
+        nextBtn.classList.remove('hidden');
+        nextBtn.classList.add('inline-flex');
+        submitBtn.classList.add('hidden');
+        submitBtn.classList.remove('inline-flex');
+      }
+
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+    }
+
+    function validateStep(index) {
+      var step = steps[index];
+      var ok = true;
+
+      step.querySelectorAll('.input-error').forEach(function (el) { el.classList.remove('input-error'); });
+      step.querySelectorAll('[data-error-for]').forEach(function (el) { el.classList.add('hidden'); });
+
+      step.querySelectorAll('input:not([type=radio]):not([type=checkbox]), select, textarea').forEach(function (el) {
+        if (!el.checkValidity()) {
+          el.classList.add('input-error');
+          ok = false;
+        }
+      });
+
+      var radioNames = {};
+      step.querySelectorAll('input[type=radio][required]').forEach(function (r) { radioNames[r.name] = true; });
+      Object.keys(radioNames).forEach(function (name) {
+        var checked = step.querySelector('input[name="' + name + '"]:checked');
+        var errEl = step.querySelector('[data-error-for="' + name + '"]');
+        if (!checked) {
+          ok = false;
+          if (errEl) errEl.classList.remove('hidden');
+        }
+      });
+
+      if (index === 1) {
+        var custom = document.getElementById('customAmount');
+        var pill = step.querySelector('input[name="amount"]:checked');
+        var errEl = step.querySelector('[data-error-for="amount"]');
+        var hasAmount = (custom.value && Number(custom.value) > 0) || !!pill;
+        if (!hasAmount) {
+          ok = false;
+          if (errEl) errEl.classList.remove('hidden');
+        }
+      }
+
+      if (index === 2) {
+        var a = step.querySelector('input[name="consentContact"]');
+        var b = step.querySelector('input[name="consentAccurate"]');
+        var errEl2 = step.querySelector('[data-error-for="consent"]');
+        if (!a.checked || !b.checked) {
+          ok = false;
+          if (errEl2) errEl2.classList.remove('hidden');
+        }
+      }
+
+      if (!ok) {
+        var firstBad = step.querySelector('.input-error');
+        if (firstBad) {
+          firstBad.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          setTimeout(function () { firstBad.focus({ preventScroll: true }); }, 300);
+        }
+      }
+
+      return ok;
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+    }
+
+    function buildReview() {
+      var d = new FormData(form);
+      function val(k) {
+        var v = d.get(k);
+        return (v === null || String(v).trim() === '') ? '—' : String(v);
+      }
+
+      var amountPill = form.querySelector('input[name="amount"]:checked');
+      var custom = document.getElementById('customAmount').value;
+      var amountText = (custom && Number(custom) > 0)
+        ? '$' + custom + ' USD'
+        : (amountPill ? '$' + amountPill.value + ' USD' : '—');
+
+      var child = form.querySelector('input[name="childPreference"]:checked');
+
+      var rows = [
+        ['Full name', val('fullName')],
+        ['Email', val('email')],
+        ['Phone / WhatsApp', val('phone')],
+        ['Location', [val('city'), val('country')].filter(function (x) { return x !== '—'; }).join(', ') || '—'],
+        ['Preferred contact', val('contactMethod')],
+        ['Sponsorship type', val('sponsorType')],
+        ['Amount', amountText],
+        ['Frequency', val('frequency')],
+        ['Preferred start', val('startMonth')],
+        ['Child preference', child ? child.dataset.label : 'No preference'],
+        ['Payment method', val('paymentMethod')],
+        ['Message', val('message')]
+      ];
+
+      reviewList.innerHTML = rows.map(function (pair) {
+        return '<div class="review-row">' +
+          '<span class="review-key">' + pair[0] + '</span>' +
+          '<span class="review-val">' + escapeHtml(pair[1]) + '</span>' +
+          '</div>';
+      }).join('');
+    }
+
+    nextBtn.addEventListener('click', function () {
+      if (!validateStep(current)) return;
+      if (current < total - 1) {
+        current++;
+        render();
+        if (current === total - 1) buildReview();
+        var apply = document.getElementById('apply');
+        if (apply) apply.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+
+    prevBtn.addEventListener('click', function () {
+      if (current > 0) {
+        current--;
+        render();
+        var apply = document.getElementById('apply');
+        if (apply) apply.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+
+    /* Live summary */
+    var sumName = document.getElementById('sumName');
+    var sumType = document.getElementById('sumType');
+    var sumAmount = document.getElementById('sumAmount');
+    var sumFreq = document.getElementById('sumFreq');
+    var sumChild = document.getElementById('sumChild');
+
+    function updateSummary() {
+      var name = document.getElementById('fullName').value.trim();
+      if (sumName) sumName.textContent = name || 'Not provided yet';
+
+      var type = form.querySelector('input[name="sponsorType"]:checked');
+      if (sumType) sumType.textContent = type ? type.dataset.label : 'Not selected';
+
+      var freq = document.getElementById('frequency').value;
+      if (sumFreq) sumFreq.textContent = freq || 'Not selected';
+
+      var custom = document.getElementById('customAmount').value;
+      var pill = form.querySelector('input[name="amount"]:checked');
+      if (sumAmount) {
+        if (custom && Number(custom) > 0) sumAmount.textContent = '$' + custom;
+        else if (pill) sumAmount.textContent = '$' + pill.value;
+        else sumAmount.textContent = '—';
+      }
+
+      var child = form.querySelector('input[name="childPreference"]:checked');
+      if (sumChild) sumChild.textContent = child ? child.dataset.label : 'No preference';
+    }
+
+    form.addEventListener('input', function (e) {
+      var el = e.target;
+      if (el.classList && el.classList.contains('input-error') && el.checkValidity()) {
+        el.classList.remove('input-error');
+      }
+      if (el.type === 'radio') {
+        var errEl = form.querySelector('[data-error-for="' + el.name + '"]');
+        if (errEl) errEl.classList.add('hidden');
+      }
+      if (el.type === 'checkbox') {
+        var errEl2 = form.querySelector('[data-error-for="consent"]');
+        if (errEl2) errEl2.classList.add('hidden');
+      }
+      updateSummary();
+    });
+    form.addEventListener('change', updateSummary);
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      for (var i = 0; i < total; i++) {
+        if (!validateStep(i)) {
+          current = i;
+          render();
+          return;
+        }
+      }
+
+      var original = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i data-lucide="loader-2" class="w-4 h-4 animate-spin"></i> Sending...';
+      if (window.lucide && typeof window.lucide.createIcons === 'function') {
+        window.lucide.createIcons();
+      }
+
+      setTimeout(function () {
+        form.style.display = 'none';
+        successPanel.classList.add('on');
+        successPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = original;
+        if (window.lucide && typeof window.lucide.createIcons === 'function') {
+          window.lucide.createIcons();
+        }
+      }, 900);
+    });
+
+    resetBtn.addEventListener('click', function () {
+      form.reset();
+      form.style.display = '';
+      successPanel.classList.remove('on');
+      current = 0;
+      form.querySelectorAll('.input-error').forEach(function (el) { el.classList.remove('input-error'); });
+      form.querySelectorAll('[data-error-for]').forEach(function (el) { el.classList.add('hidden'); });
+      render();
+      updateSummary();
+      var apply = document.getElementById('apply');
+      if (apply) apply.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+
+    render();
+    updateSummary();
+  })();
+
+  /* ============================================
+     DOWNLOAD THE PRINTABLE FORM
+     Pulls the print markup straight from <template>
+     and wraps it in a minimal full HTML document.
+     ============================================ */
+  (function initDownload() {
+    var tpl = document.getElementById('printFormTemplate');
+    if (!tpl) return;
+
+    var openTag  = '<' + '!DOCTYPE html>' +
+                   '<' + 'html lang="en">' +
+                   '<' + 'head>' +
+                   '<' + 'meta charset="UTF-8">' +
+                   '<' + 'meta name="viewport" content="width=device-width,initial-scale=1">' +
+                   '<' + 'title>Kikiji National Orphanage Center — Child Sponsorship Application Form<' + '/title>' +
+                   '<' + '/head>' +
+                   '<' + 'body>';
+
+    var closeTag = '<' + '/body>' + '<' + '/html>';
+
+    document.querySelectorAll('[data-download-form]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var markup = tpl.innerHTML;
+        var doc = openTag + markup + closeTag;
+
+        var blob = new Blob([doc], { type: 'text/html;charset=utf-8' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'Kikiji-Sponsorship-Application-Form.html';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(function () { URL.revokeObjectURL(url); }, 1500);
+
+        var original = btn.innerHTML;
+        btn.innerHTML = '<i data-lucide="check" class="w-4 h-4"></i> Downloaded';
+        if (window.lucide && typeof window.lucide.createIcons === 'function') {
+          window.lucide.createIcons();
+        }
+        setTimeout(function () {
+          btn.innerHTML = original;
+          if (window.lucide && typeof window.lucide.createIcons === 'function') {
+            window.lucide.createIcons();
+          }
+        }, 2000);
+      });
+    });
+  })();
+
+})();
+</script>
+
+</body>
+</html>
